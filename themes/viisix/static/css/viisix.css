@@ -1,0 +1,61 @@
+* {
+    box-sizing:border-box
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
+    line-height:1.5;
+    margin:0;color:#111;
+    background-color:#fff;
+    max-width: 768px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.hover-underline:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
+    text-decoration:underline
+}
+
+.color-inherit{
+    color:inherit
+}
+
+.member, .project {
+    border: 1px solid #a6a6a6;
+    border-right: 2px solid #a6a6a6;
+}
+
+.member h4, .project h4 {
+    margin: 0 0 1.5em;
+}
+
+.member-avatar, .project-avatar {
+    text-align: center;
+    width: 200px;
+}
+
+.member-avatar-img, .project-avatar-img {
+    width: 150px;
+    height: 150px;
+    object-fit: none;
+    object-position: center;
+}
+
+.member-avatar-img {
+    border-radius: 50%;
+}
+
+.project-avatar-img {
+    border: 1px solid #a6a6a6;
+}
+
+.member-content {
+    margin-top: 2.5em;
+}

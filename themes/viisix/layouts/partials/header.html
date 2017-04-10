@@ -1,0 +1,20 @@
+<header class="py3">
+    <div>
+        <img src="{{ .Site.BaseURL }}/images/logo150x84.png"
+             alt="{{ .Title }}"
+             style="max-width: 100px"
+        />
+        <span class="h4">fun tech researching</span>
+    </div>
+    <nav id="nav" class="pl2 my2" style="max-width: 768px">
+        <div class="mxn2 flex flex-wrap">
+            {{ range .Site.Menus.main }}
+            <div class="px2 col-6 sm-col-4 md-col-3">
+                <a href="{{ .URL }}"
+                   class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline"
+                >{{ .Name }}</a>
+            </div>
+            {{ end }}
+        </div>
+    </nav>
+</header>

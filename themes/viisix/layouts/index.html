@@ -1,0 +1,18 @@
+{{ partial "head.html" . }}
+<body>
+    <div class="px3">
+        {{ partial "header.html" . }}
+
+        <section id="main" class="py3">
+            {{ range .Data.Pages }}
+                {{ if eq .Type "index" }}
+                    <h2>
+                        {{ .Title }}
+                    </h2>
+                    {{ .Content }}
+                {{ end }}
+            {{ end }}
+        </section>
+    </div>
+</body>
+</html>

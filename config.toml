@@ -1,0 +1,19 @@
+languageCode = "en-us"
+title = "ViiSiX"
+baseURL = "https://viisix.space/"
+theme = "viisix"
+
+[params]
+  google_analytics = "UA-76194783-4"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+
+[[menu.main]]
+  name = "Projects"
+  url = "/projects"
+
+[[menu.main]]
+  name = "Members"
+  url = "/members"

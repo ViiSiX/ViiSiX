@@ -1,0 +1,29 @@
+{{ partial "head.html" . }}
+<body>
+    <div class="px3">
+        {{ partial "header.html" . }}
+
+        <section id="main" class="py3">
+            <h2>Our members</h2>
+            {{ range .Data.Pages }}
+                {{ if eq .Type "members" }}
+                    <div class="member clearfix mb2">
+                        <div class="member-avatar right p2 mr1">
+                            <h4>{{ .Params.full_name }}</h4>
+                            {{ if .Params.avatar }}
+                            <img src="{{ .Site.BaseURL }}/images/{{ .Params.avatar }}"
+                                 alt="{{ .Params.full_name }}'s avatar"
+                                 class="member-avatar-img"
+                            />
+                            {{ end }}
+                        </div>
+                        <div class="member-content overflow-hidden px2">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                {{ end }}
+            {{ end }}
+        </section>
+    </div>
+</body>
+</html>
