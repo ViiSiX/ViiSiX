@@ -59,3 +59,7 @@ h1 {
 .member-content {
     margin-top: 2.5em;
 }
+
+header {
+    padding-bottom: 0 !important;
+}

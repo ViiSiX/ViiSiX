@@ -5,15 +5,26 @@ theme = "viisix"
 
 [params]
   google_analytics = "UA-76194783-4"
+  contact_iframe = 'https://docs.google.com/forms/d/e/1FAIpQLSfhqdXEH-YtUM9ipkdEKwRfqmdX2834qqfD4yk3SUXSWJFIhQ/viewform?embedded=true'
+  contact_iframe_width = 680
+  contact_iframe_height = 1000
 
 [[menu.main]]
   name = "Home"
   url = "/"
+  weight = 1
 
 [[menu.main]]
   name = "Projects"
   url = "/projects"
+  weight = 2
 
 [[menu.main]]
   name = "Members"
   url = "/members"
+  weight = 3
+
+[[menu.main]]
+  name = "Contact Us"
+  url = "/contact"
+  weight = 4
