@@ -1,0 +1,36 @@
+{{ partial "head.html" . }}
+<body>
+    <div class="px3">
+        {{ partial "header.html" . }}
+
+        <section id="main" class="py3">
+            <h2>Project {{ .Title }}</h2>
+                <div class="project clearfix mb2">
+                    <div class="project-avatar left p2">
+                        {{ if .Params.avatar }}
+                            {{ if .Params.project_url }}
+                            <a href="{{ .Params.project_url }}"
+                               class="color-inherit text-decoration-none hover-underline"
+                            >
+                                <img src="{{ .Site.BaseURL }}/images/{{ .Params.avatar }}"
+                                     alt="{{ .Title }}'s avatar"
+                                     class="project-avatar-img"
+                                />
+                            </a>
+                            <h4>Project's <a href="{{ .Params.project_url }}">Website</a></h4>
+                            {{ else }}
+                                <img src="{{ .Site.BaseURL }}/images/{{ .Params.avatar }}"
+                                     alt="{{ .Title }}'s avatar"
+                                     class="project-avatar-img"
+                                />
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                    <div class="project-content overflow-hidden px2">
+                        {{ .Content }}
+                    </div>
+                </div>
+        </section>
+    </div>
+</body>
+</html>

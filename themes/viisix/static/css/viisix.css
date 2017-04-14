@@ -19,26 +19,45 @@ h1 {
     font-size: 2rem;
 }
 
-.hover-underline:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
+.hover-underline:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     text-decoration:underline
 }
 
-.color-inherit{
+.color-inherit {
     color:inherit
 }
 
 .member, .project {
     border: 1px solid #a6a6a6;
     border-right: 2px solid #a6a6a6;
+    border-bottom: 2px solid #a6a6a6;
+}
+
+.project-list a .project {
+    max-width: 350px;
+}
+
+.project-list a .project:hover {
+    border: 2px solid #a6a6a6;
+    border-right: 1px solid #a6a6a6;
+    border-bottom: 1px solid #a6a6a6;
 }
 
 .member h4, .project h4 {
     margin: 0 0 1.5em;
 }
 
+.project-list h4 {
+    margin-bottom: 0.5em;
+}
+
 .member-avatar, .project-avatar {
     text-align: center;
-    width: 200px;
+    width: 180px;
+}
+
+.project-list .project-avatar {
+    width: 120px;
 }
 
 .member-avatar-img, .project-avatar-img {
@@ -46,6 +65,12 @@ h1 {
     height: 150px;
     object-fit: none;
     object-position: center;
+}
+
+.project-list .project-avatar-img {
+    width: 100px;
+    height: 100px;
+    object-fit: inherit;
 }
 
 .member-avatar-img {
@@ -56,8 +81,28 @@ h1 {
     border: 1px solid #a6a6a6;
 }
 
+.project-list a .project:hover .project-avatar-img {
+    border: 1px solid #666666;
+}
+
 .member-content {
     margin-top: 2.5em;
+}
+
+.project-summary {
+    font-weight: 500;
+    font-size: small;
+    text-align: justify;
+}
+
+.project a {
+    font-style: italic;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project a:hover {
+    text-decoration: underline;
 }
 
 header {

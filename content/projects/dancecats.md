@@ -3,6 +3,7 @@ date = "2017-04-10T21:17:30+07:00"
 title = "DanceCats"
 avatar = "DanceCats.png"
 project_url = "https://github.com/DanceCats"
+project_summary = "DanceCats is an open source tool used to generate Data reports using web interface."
 
 +++
 
