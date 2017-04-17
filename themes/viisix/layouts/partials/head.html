@@ -6,8 +6,12 @@
 
     <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
 
+    <!-- Logo -->
+    <link rel="icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon"/>
+
     <!-- CSS -->
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/basscss.min.css"/>
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/viisix.css"/>
     <!-- End of CSS -->
