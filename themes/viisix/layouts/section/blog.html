@@ -1,0 +1,23 @@
+{{ partial "head.html" . }}
+<body>
+    <div class="px3">
+        {{ partial "header.html" . }}
+
+        <section id="main" class="py3">
+            {{ range .Data.Pages }}
+            <div class="blog-post px1 mb2">
+                {{ if eq .Type "blog" }}
+                    <h2 class="mt1 mb0">
+                        <a href="{{ .Permalink }}"
+                           class="color-inherit text-decoration-none hover-underline"
+                        >{{ .Title }}</a>
+                    </h2>
+                    <p class="blog-post-author mt0 mb1">By: {{.Params.Author}}</p>
+                    <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
+                {{ end }}
+            </div>
+            {{ end }}
+        </section>
+    </div>
+</body>
+</html>

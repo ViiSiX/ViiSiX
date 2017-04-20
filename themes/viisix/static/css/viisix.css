@@ -27,7 +27,7 @@ h1 {
     color:inherit
 }
 
-.member, .project {
+.member, .project, .blog-post {
     border: 1px solid #a6a6a6;
     border-right: 2px solid #a6a6a6;
     border-bottom: 2px solid #a6a6a6;
@@ -103,6 +103,45 @@ h1 {
 
 .project a:hover {
     text-decoration: underline;
+}
+
+.blog-post {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.blog-post p.blog-post-summary {
+    font-size: small;
+    font-style: italic;
+    color: #666666;
+}
+
+.blog-post p.blog-post-author {
+    font-weight: 500;
+    font-size: small;
+    color: #a6a6a6;
+}
+
+.blog-post .blog-post-content img {
+    display: block;
+    margin: 0 auto;
+}
+
+.blog-post .blog-post-content a {
+    font-style: italic;
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-post .blog-post-content a:hover {
+    text-decoration: underline;
+}
+
+.blog-post .blog-post-content pre,
+.blog-post .blog-post-content code
+{
+    overflow: scroll;
+    background-color: rgba(215, 228, 215, 0.6);
 }
 
 header {

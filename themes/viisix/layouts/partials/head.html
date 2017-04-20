@@ -13,10 +13,13 @@
     <!-- CSS -->
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/basscss.min.css"/>
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/viisix.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/prettify.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/viisix.css?v=r2_02"/>
     <!-- End of CSS -->
 
     <!-- Javascript -->
+    <script src="{{ .Site.BaseURL }}js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <!-- End of Javascript -->
 
     {{ partial "google_analytics" . }}
