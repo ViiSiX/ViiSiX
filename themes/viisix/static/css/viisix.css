@@ -176,3 +176,14 @@ h1 {
 header {
     padding-bottom: 0 !important;
 }
+
+
+<!-- ISSO Section -->
+#isso-thread {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+#isso-thread #input-wrapper {
+    display: block;
+}
