@@ -1,8 +1,11 @@
 +++
 date = "2017-04-21T17:07:45+07:00"
 title = "Alert blocking sessions on SQL Server"
-summary = "Sometime your whole application is hang just because of deadlock or big query. For our case - yes, then I write this script and setup a job that run every 5 minutes to notice us for further checks."
+summary = "Sometime your whole application hang just because of deadlock or big query. For our case - yes, then I write this script and setup a job that run every 5 minutes to notice us for further checks."
 author = "Trong-Nghia Nguyen"
+keywords = ["viisix", "viisix nghia sqlserver", "sqlserver blocking session", "sql server"]
+feature_image = "blog-images/alert-blocking-sessions-on-sql-server/01.png"
+feature_image_v_adjust = 10
 
 +++
 The below script worked on `SQL Server 2008`, please test on other versions and let me know if you have any feedback.

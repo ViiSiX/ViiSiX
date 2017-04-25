@@ -1,10 +1,27 @@
 <!DOCTYPE html>
+{{ $isHomePage := eq .Title .Site.Title }}
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+
+    <!-- SEO -->
+    {{ if isset .Params "keywords" }}
+        <meta content='{{ delimit .Keywords ", " }}' name="keywords"/>
+    {{ end }}
+    <meta content="{{ .Title }} &middot; {{ .Site.Title }}" property="og:title"/>
+    {{ if eq $isHomePage false }}
+        {{ if isset .Params "summary" }}
+            <meta content="{{ .Params.Summary }}" name="description"/>
+            <meta content="{{ .Params.Summary }}" property="og:description"/>
+        {{ end }}
+        {{ if isset .Params "feature_image" }}
+            <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image"/>
+        {{ end }}
+    {{ end }}
+    <!-- End of SEO -->
 
     <!-- Logo -->
     <link rel="icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon"/>
@@ -14,7 +31,7 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/basscss.min.css"/>
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/prettify.css"/>
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/viisix.css?v=r2_03"/>
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/viisix.css?v=r3_00"/>
     <!-- End of CSS -->
 
     <!-- Javascript -->

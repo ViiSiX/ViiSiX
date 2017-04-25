@@ -3,6 +3,9 @@ author = "Trong-Nghia Nguyen"
 date = "2017-04-21T00:50:19+07:00"
 title = "Docker Note"
 summary = "Following the trend, I decided to use Docker to create develop environment on my Mac Book, and note down these tips for later usage. Please feel free to correct me to perfect this document."
+keywords = ["viisix", "viisix nghia docker", "docker note"]
+feature_image = "logo/docker.png"
+feature_image_v_adjust = 25
 
 +++
 I. Installation
