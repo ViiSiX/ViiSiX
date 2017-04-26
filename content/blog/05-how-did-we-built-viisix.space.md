@@ -5,7 +5,7 @@ author = "Trong-Nghia Nguyen"
 date = "2017-04-26T11:48:02+07:00"
 title = "How did we build viisix.space?"
 feature_image_v_adjust = 50
-feature_image = "/logo/gohugo.png"
+feature_image = "logo/gohugo.png"
 
 +++
 

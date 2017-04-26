@@ -18,7 +18,7 @@
             <meta content="{{ .Params.Summary }}" property="og:description"/>
         {{ end }}
         {{ if isset .Params "feature_image" }}
-            <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image"/>
+            <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image:secure_url"/>
         {{ end }}
     {{ end }}
     <!-- End of SEO -->
