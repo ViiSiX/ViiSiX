@@ -118,7 +118,8 @@ h1 {
 }
 
 .blog-post p.blog-post-author,
-.blog-post-container p.blog-post-author {
+.blog-post-container p.blog-post-author,
+.isso-thread .textarea.placeholder {
     font-weight: 500;
     font-size: small;
     color: #a6a6a6;
@@ -177,13 +178,90 @@ header {
     padding-bottom: 0 !important;
 }
 
-
-<!-- ISSO Section -->
-#isso-thread {
+.isso-thread {
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
 
-#isso-thread #input-wrapper {
+.isso-thread .auth-section {
+    border-top: 1px solid #a6a6a6;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+}
+
+@media (max-width: 480px) {
+    .isso-thread .auth-section {
+        width: 100%;
+    }
+}
+@media (min-width: 481px) {
+    .isso-thread .auth-section {
+        width: 33%;
+    }
+}
+
+.isso-thread .input-wrapper {
     display: block;
+}
+
+.isso-thread .textarea {
+    min-height: 68px;
+    outline: none;
+}
+
+.isso-thread .form-wrapper .textarea,
+.isso-thread .form-wrapper .input-wrapper input{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.isso-thread .form-wrapper .textarea {
+    margin: 0 0 .3em;
+    padding: .4em .8em;
+    border-radius: 3px;
+}
+
+.isso-thread .form-wrapper .input-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.isso-thread .form-wrapper .input-wrapper input {
+    outline: none;
+    margin: 0 0 .3em;
+    border-radius: 2px;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.isso-thread .form-wrapper .textarea:focus,
+.isso-thread .form-wrapper input:focus {
+    border: 1px solid #000000;
+}
+
+.isso-thread .post-action {
+    margin-top: 0.2em;
+}
+
+.isso-thread .post-action input {
+    width: 100%;
+    border-radius: 2px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: #fff;
+    border: 2px solid #ff6e6e;
+    border-right-color: #dd6e6e;
+    border-bottom-color: #dd6e6e;
+    color: #ff6e6e;
+    font-size: medium;
+    margin: 0 0 .3em;
+    outline: none;
+}
+
+.isso-thread .post-action input:hover {
+    border: 2px solid #dd6e6e;
+    border-right-color: #ff6e6e;
+    border-bottom-color: #ff6e6e;
+    background-color: rgba(255, 90, 90, 0.2);
+    cursor: pointer;
 }
