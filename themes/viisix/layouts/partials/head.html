@@ -34,13 +34,13 @@
         loadCSS("//fonts.googleapis.com/css?family=Source+Code+Pro");
         loadCSS("{{ .Site.BaseURL }}css/basscss.min.css");
         loadCSS("{{ .Site.BaseURL }}css/prettify.min.css");
-        loadCSS("{{ .Site.BaseURL }}css/viisix.min.css");
+        loadCSS("{{ .Site.BaseURL }}css/viisix.min.css?v={{ .Site.Params.CSS_Version }}");
     </script>
     <noscript>
         <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/basscss.min.css"/>
         <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/prettify.min.css"/>
-        <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/viisix.min.css?v=r3_01"/>
+        <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/viisix.min.css?v={{ .Site.Params.CSS_Version }}"/>
     </noscript>
     <!-- End of CSS -->
 
