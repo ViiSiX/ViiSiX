@@ -16,7 +16,7 @@
                         if (window.jQuery) {
                             $('code').addClass(className)
                         } else {
-                            setTimeout(function () { delayClassAdding(className) }, 50 )
+                            setTimeout(function () { delayClassAdding(className) }, 50)
                         }
                     }
 
@@ -30,6 +30,17 @@
                 src="https://comments.viisix.space/js/embed.min.js"
         ></script>
         <section id="isso-thread" class="isso-thread"></section>
+        <script type="text/javascript">
+            function delayPrettify() {
+                if (window.PR) {
+                    setTimeout(PR.prettyPrint, 50)
+                } else {
+                    setTimeout(function () { delayPrettify() }, 50)
+                }
+            }
+
+            delayPrettify()
+        </script>
     </div>
 </body>
 </html>
