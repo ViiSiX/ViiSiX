@@ -145,6 +145,7 @@ h1 {
 .blog-post-container .blog-post-content img {
     display: block;
     margin: 0 auto;
+    width: 90%;
 }
 
 .blog-post-container .blog-post-content a {

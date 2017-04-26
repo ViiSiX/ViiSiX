@@ -18,7 +18,7 @@ You can follow [this document](https://docs.docker.com/docker-for-mac/install/) 
 
 After finished installation, go to your Launchpad and click on Docker's Whale icon to start it. Wait until the service finish starting.
 
-{{< figure src="/blog-images/docker-note/01.png" >}}
+{{< figure src="/blog-images/docker-note/01.png" alt="Docker on Launchpad" >}}
 
 Go to your console and check Docker's version to verify that the latest Docker is installed.
 

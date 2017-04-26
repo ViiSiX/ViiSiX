@@ -10,7 +10,7 @@ feature_image_v_adjust = 12.5
 +++
 **_* based on my personal experiences_**
 
-{{< figure src="/blog-images/implement-ci-the-right-way/01.png" >}}
+{{< figure src="/blog-images/implement-ci-the-right-way/01.png" alt="Beta and test rails" >}}
 
 In recent years, Agile methodology has been raising popularly together with CI (Continuous Integration) and CD (Continuous Delivery/Deployment) with the expectation of fast and stabled software products delivery. But what exactly are CI-CD and how to apply them? They are not simple some technologies or techniques that enable your team to build up products more quickly by injecting some Shell scripts into deployment processes, they are, indeed, a process to be applied in a consistent and continuously way.
 
