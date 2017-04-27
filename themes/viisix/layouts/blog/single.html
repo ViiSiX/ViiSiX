@@ -1,5 +1,6 @@
 {{ partial "head.html" . }}
 <body>
+    {{ partial "facebook_sdk.html" . }}
     <div class="px3">
         {{ partial "header.html" . }}
 
@@ -10,6 +11,12 @@
                 <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
                 <div class="blog-post-content">
                     {{ .Content }}
+                </div>
+                <div
+                        class="fb-like"
+                        data-share="true"
+                        data-width="450"
+                        data-show-faces="true">
                 </div>
                 <script type="text/javascript">
                     function delayClassAdding(className) {

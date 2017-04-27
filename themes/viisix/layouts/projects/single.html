@@ -1,5 +1,6 @@
 {{ partial "head.html" . }}
 <body>
+    {{ partial "facebook_sdk.html" . }}
     <div class="px3">
         {{ partial "header.html" . }}
 
@@ -28,6 +29,10 @@
                     </div>
                     <div class="project-content overflow-hidden px2">
                         {{ .Content }}
+                        <div class="fb-like"
+                             data-share="true"
+                             data-width="300"
+                        ></div>
                     </div>
                 </div>
         </section>

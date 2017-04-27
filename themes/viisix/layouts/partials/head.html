@@ -18,9 +18,12 @@
             <meta content="{{ .Params.Summary }}" property="og:description"/>
         {{ end }}
         {{ if isset .Params "feature_image" }}
+            <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image"/>
             <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image:secure_url"/>
         {{ end }}
     {{ end }}
+    <meta content="{{ .Site.Params.facebook_app_id }}" property="fb:app_id"/>
+    <meta content="{{ .Permalink }}" property="og:url"/>
     <!-- End of SEO -->
 
     <!-- Logo -->

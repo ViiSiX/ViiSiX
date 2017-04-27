@@ -4,6 +4,7 @@ baseURL = "https://viisix.space/"
 theme = "viisix"
 
 [params]
+  facebook_app_id = "1468082743254961"
   google_analytics = "UA-76194783-4"
   contact_iframe = 'https://docs.google.com/forms/d/e/1FAIpQLSfhqdXEH-YtUM9ipkdEKwRfqmdX2834qqfD4yk3SUXSWJFIhQ/viewform?embedded=true'
   contact_iframe_width = 680
