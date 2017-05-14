@@ -4,7 +4,7 @@ summary = "Building a information website using Wordpress, Druppal or Django is 
 author = "Trong-Nghia Nguyen"
 date = "2017-04-26T11:48:02+07:00"
 title = "How did we build viisix.space?"
-feature_image_v_adjust = 50
+feature_image_v_adjust = 29
 feature_image = "logo/gohugo_square.png"
 
 +++
