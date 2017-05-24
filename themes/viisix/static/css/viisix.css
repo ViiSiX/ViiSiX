@@ -19,12 +19,22 @@ h1 {
     font-size: 2rem;
 }
 
+@media (min-width: 52em) {
+    .v-md-col-2 {
+        width: 15.33333% !important;
+    }
+}
+
 .hover-underline:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    text-decoration:underline
+    text-decoration:underline;
 }
 
 .color-inherit {
     color:inherit
+}
+
+.letter-s-3 {
+    letter-spacing: 3px;
 }
 
 .member, .project, .blog-post, .blog-post-container {
@@ -106,8 +116,8 @@ h1 {
 }
 
 .blog-post {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .blog-post p.blog-post-summary,
