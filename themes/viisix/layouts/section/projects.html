@@ -12,13 +12,13 @@
                         <a href="{{ .Permalink }}"
                            class="color-inherit text-decoration-none"
                         >
-                            <div class="project clearfix mb2">
+                            <div class="project clearfix mb1">
                                 <div class="project-avatar left p1">
                                     <h4>
                                         {{ .Title}}
                                     </h4>
                                     {{ if .Params.avatar }}
-                                        <img src="{{ .Site.BaseURL }}/images/{{ .Params.avatar }}"
+                                        <img src="{{ .Site.BaseURL }}/projects/{{ .Params.avatar }}"
                                              alt="{{ .Title }}'s avatar"
                                              class="project-avatar-img"
                                              width="100"

@@ -37,18 +37,18 @@ h1 {
     letter-spacing: 3px;
 }
 
-.member, .project, .blog-post, .blog-post-container {
+.member, .project, .blog-post, .blog-post-container, .algori {
     border: 1px solid #a6a6a6;
     border-right: 2px solid #a6a6a6;
     border-bottom: 2px solid #a6a6a6;
     margin-right: .5rem;
 }
 
-.project-list a .project {
+.project-list a .project, .algori-list a .algori {
     max-width: 350px;
 }
 
-.project-list a .project:hover {
+.project-list a .project:hover, .algori-list a .algori:hover {
     border: 2px solid #a6a6a6;
     border-right: 1px solid #a6a6a6;
     border-bottom: 1px solid #a6a6a6;
@@ -62,8 +62,17 @@ h1 {
     margin-bottom: 0.5em;
 }
 
-.member-avatar, .project-avatar {
+.algori h4 {
+    margin-top: .5rem;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+
+.member-avatar, .project-avatar, .algori-avatar {
     text-align: center;
+}
+
+.member-avatar, .project-avatar {
     width: 180px;
 }
 
@@ -71,11 +80,19 @@ h1 {
     width: 120px;
 }
 
+.algori-avatar-img, .member-avatar-img, .project-avatar-img {
+    object-fit: none;
+    object-position: center;
+}
+
 .member-avatar-img, .project-avatar-img {
     width: 150px;
     height: 150px;
-    object-fit: none;
-    object-position: center;
+}
+
+.algori-avatar-img {
+    width: 98%;
+    object-fit: inherit;
 }
 
 .project-list .project-avatar-img {
@@ -98,6 +115,10 @@ h1 {
 
 .member-content {
     margin-top: 4em;
+}
+
+.algori-summary {
+    margin-left: 1.5rem;
 }
 
 .project-summary {
