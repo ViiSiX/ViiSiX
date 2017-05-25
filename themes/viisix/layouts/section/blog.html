@@ -4,9 +4,9 @@
     <div class="px2">
         {{ partial "header.html" . }}
 
-        <section id="main" class="py3">
+        <section id="main" class="mx3">
             {{ range .Data.Pages }}
-            <div class="blog-post px1 mb2">
+            <div class="blog-post px1 mb1">
                 {{ if eq .Type "blog" }}
                     <h2 class="mt1 mb0">
                         <a href="{{ .Permalink }}"
