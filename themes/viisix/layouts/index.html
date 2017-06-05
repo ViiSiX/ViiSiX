@@ -1,15 +1,15 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="px3">
+    <div class="px2">
         {{ partial "header.html" . }}
 
-        <section id="main" class="py3">
+        <section id="main" class="mx3">
             {{ range .Data.Pages }}
                 {{ if eq .Type "index" }}
-                    <h2>
+                    <h1>
                         {{ .Title }}
-                    </h2>
+                    </h1>
                     {{ .Content }}
                 {{ end }}
             {{ end }}

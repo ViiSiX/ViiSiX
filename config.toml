@@ -2,6 +2,7 @@ languageCode = "en-us"
 title = "ViiSiX"
 baseURL = "https://viisix.space/"
 theme = "viisix"
+enableRobotsTXT = "true"
 
 [params]
   facebook_app_id = "1468082743254961"
@@ -9,7 +10,7 @@ theme = "viisix"
   contact_iframe = 'https://docs.google.com/forms/d/e/1FAIpQLSfhqdXEH-YtUM9ipkdEKwRfqmdX2834qqfD4yk3SUXSWJFIhQ/viewform?embedded=true'
   contact_iframe_width = 680
   contact_iframe_height = 1000
-  css_version = "r3_02"
+  css_version = "r4_00"
 
 [[menu.main]]
   name = "Home"
@@ -27,11 +28,16 @@ theme = "viisix"
   weight = 3
 
 [[menu.main]]
+  name = "AlgoriJS"
+  url = "/algorijs"
+  weight = 4
+
+[[menu.main]]
   name = "Blog"
   url = "/blog"
-  weight = 4
+  weight = 5
 
 [[menu.main]]
   name = "Contact Us"
   url = "/contact"
-  weight = 5
+  weight = 6

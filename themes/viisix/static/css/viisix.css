@@ -3,10 +3,10 @@
 }
 
 body {
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
-    line-height:1.5;
-    margin:0;color:#111;
-    background-color:#fff;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.5;
+    margin:0;color: #111;
+    background-color: #fff;
     max-width: 768px;
 }
 
@@ -19,25 +19,36 @@ h1 {
     font-size: 2rem;
 }
 
+@media (min-width: 52em) {
+    .v-md-col-2 {
+        width: 15.33333% !important;
+    }
+}
+
 .hover-underline:hover, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-    text-decoration:underline
+    text-decoration:underline;
 }
 
 .color-inherit {
     color:inherit
 }
 
-.member, .project, .blog-post, .blog-post-container {
+.letter-s-3 {
+    letter-spacing: 3px;
+}
+
+.member, .project, .blog-post, .blog-post-container, .algori, .algori-container {
     border: 1px solid #a6a6a6;
     border-right: 2px solid #a6a6a6;
     border-bottom: 2px solid #a6a6a6;
+    margin-right: .5rem;
 }
 
-.project-list a .project {
+.project-list a .project, .algori-list a .algori {
     max-width: 350px;
 }
 
-.project-list a .project:hover {
+.project-list a .project:hover, .algori-list a .algori:hover {
     border: 2px solid #a6a6a6;
     border-right: 1px solid #a6a6a6;
     border-bottom: 1px solid #a6a6a6;
@@ -51,8 +62,17 @@ h1 {
     margin-bottom: 0.5em;
 }
 
-.member-avatar, .project-avatar {
+.algori h4 {
+    margin-top: .5rem;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+}
+
+.member-avatar, .project-avatar, .algori-avatar {
     text-align: center;
+}
+
+.member-avatar, .project-avatar {
     width: 180px;
 }
 
@@ -60,11 +80,19 @@ h1 {
     width: 120px;
 }
 
+.algori-avatar-img, .member-avatar-img, .project-avatar-img {
+    object-fit: none;
+    object-position: center;
+}
+
 .member-avatar-img, .project-avatar-img {
     width: 150px;
     height: 150px;
-    object-fit: none;
-    object-position: center;
+}
+
+.algori-avatar-img {
+    width: 98%;
+    object-fit: inherit;
 }
 
 .project-list .project-avatar-img {
@@ -89,6 +117,10 @@ h1 {
     margin-top: 4em;
 }
 
+.algori .algori-summary {
+    margin-left: 1.5rem;
+}
+
 .project-summary {
     font-weight: 500;
     font-size: small;
@@ -105,13 +137,9 @@ h1 {
     text-decoration: underline;
 }
 
-.blog-post {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-}
-
 .blog-post p.blog-post-summary,
-.blog-post-container p.blog-post-summary {
+.blog-post-container p.blog-post-summary,
+.algori-container p.algori-summary {
     font-size: small;
     font-style: italic;
     color: #666666;
@@ -135,11 +163,6 @@ h1 {
 .blog-post .feature-image-container .feature-image {
     margin-top: -50%;
     width: 100%;
-}
-
-.blog-post-container {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
 }
 
 .blog-post-container .blog-post-content img {
@@ -179,11 +202,6 @@ header {
     padding-bottom: 0 !important;
 }
 
-.isso-thread {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-}
-
 .isso-thread .auth-section {
     border-top: 1px solid #a6a6a6;
     margin-top: 0.5em;
@@ -199,6 +217,12 @@ header {
     .isso-thread .auth-section {
         width: 33%;
     }
+}
+
+/* Algori */
+.algori-func {
+    font-size: x-large;
+    text-align: center;
 }
 
 /* ISSO */

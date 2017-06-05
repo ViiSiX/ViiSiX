@@ -1,11 +1,11 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="px3">
+    <div class="px2">
         {{ partial "header.html" . }}
 
-        <section id="main" class="py3">
-            <h2>Our members</h2>
+        <section id="main" class="mx3">
+            <h1>Our members</h1>
             {{ range .Data.Pages }}
                 {{ if eq .Type "members" }}
                     <div class="member clearfix mb2">

@@ -1,24 +1,24 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="px3">
+    <div class="px2">
         {{ partial "header.html" . }}
 
-        <section id="main" class="py3">
-            <h2>Our projects</h2>
+        <section id="main" class="mx3">
+            <h1>Our projects</h1>
             <div class="project-list">
                 {{ range .Data.Pages }}
                     {{ if eq .Type "projects" }}
                         <a href="{{ .Permalink }}"
                            class="color-inherit text-decoration-none"
                         >
-                            <div class="project clearfix mb2">
+                            <div class="project clearfix mb1">
                                 <div class="project-avatar left p1">
                                     <h4>
                                         {{ .Title}}
                                     </h4>
                                     {{ if .Params.avatar }}
-                                        <img src="{{ .Site.BaseURL }}/images/{{ .Params.avatar }}"
+                                        <img src="{{ .Site.BaseURL }}/projects/{{ .Params.avatar }}"
                                              alt="{{ .Title }}'s avatar"
                                              class="project-avatar-img"
                                              width="100"

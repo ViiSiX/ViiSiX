@@ -1,15 +1,18 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <div class="px2">
         {{ partial "header.html" . }}
 
         <section id="main" class="mx3" style="padding-bottom: 0 !important;">
-            <div class="blog-post-container px1">
+            <div class="algori-container px1">
                 <h1 class="mt1 mb0">{{ .Title }}</h1>
-                <p class="blog-post-author mt0 mb1">By: {{.Params.Author}}</p>
-                <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
-                <div class="blog-post-content">
+                <p class="algori-summary mt0">{{ .Params.Summary }}</p>
+                <div id="algori-demo"></div>
+                <div class="algori-content">
                     {{ .Content }}
                 </div>
                 <div
@@ -29,8 +32,12 @@
 
                     delayClassAdding('prettyprint');
                 </script>
+                {{ range .Params.js_libs }}
+                    <script async src="{{ $.Site.BaseURL }}algorijs/js/{{ . }}"></script>
+                {{ end }}
             </div>
         </section>
+        <!--
         <script data-isso="https://comments.viisix.space"
                 data-isso-css="false"
                 data-isso-require-email="true"
@@ -48,6 +55,7 @@
 
             delayPrettify()
         </script>
+        -->
     </div>
 </body>
 </html>

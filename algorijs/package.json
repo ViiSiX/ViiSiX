@@ -1,0 +1,21 @@
+{
+  "name": "algorijs",
+  "version": "0.0.1",
+  "description": "Algorithm Demos by Javascript",
+  "author": "Trong-Nghia Nguyen <nghia@viisix.space>",
+  "repository": "https://github.com/scattm/ViiSiX",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "mathjs": "^3.13.3",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
