@@ -1,10 +1,14 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <div class="px2">
         {{ partial "header.html" . }}
 
         <section id="main" class="mx3">
+            <h1>Algorithm Demos by Javascript</h1>
             <div class="algori-list">
                 {{ range .Data.Pages }}
                     {{ if eq .Type "algorijs" }}
@@ -16,10 +20,10 @@
                                 {{ .Title}}
                             </h4>
                             <div class="algori-summary">
-                                {{ .Params.algo_summary }}
+                                {{ .Params.summary }}
                             </div>
                             <div class="algori-avatar">
-                                <img src="{{ .Site.BaseURL }}/algorijs/{{ .Params.algo_avatar }}"
+                                <img src="{{ .Site.BaseURL }}algorijs/images/{{ .Params.algo_avatar }}"
                                      alt="{{ .Params.algo_avatar_summary }}"
                                      class="algori-avatar-img"
                                 />

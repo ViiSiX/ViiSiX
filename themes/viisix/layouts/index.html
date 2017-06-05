@@ -7,9 +7,9 @@
         <section id="main" class="mx3">
             {{ range .Data.Pages }}
                 {{ if eq .Type "index" }}
-                    <h2>
+                    <h1>
                         {{ .Title }}
-                    </h2>
+                    </h1>
                     {{ .Content }}
                 {{ end }}
             {{ end }}

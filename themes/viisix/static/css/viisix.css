@@ -3,10 +3,10 @@
 }
 
 body {
-    font-family: monospace;
-    line-height:1.5;
-    margin:0;color:#111;
-    background-color:#fff;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.5;
+    margin:0;color: #111;
+    background-color: #fff;
     max-width: 768px;
 }
 
@@ -37,7 +37,7 @@ h1 {
     letter-spacing: 3px;
 }
 
-.member, .project, .blog-post, .blog-post-container, .algori {
+.member, .project, .blog-post, .blog-post-container, .algori, .algori-container {
     border: 1px solid #a6a6a6;
     border-right: 2px solid #a6a6a6;
     border-bottom: 2px solid #a6a6a6;
@@ -117,7 +117,7 @@ h1 {
     margin-top: 4em;
 }
 
-.algori-summary {
+.algori .algori-summary {
     margin-left: 1.5rem;
 }
 
@@ -138,7 +138,8 @@ h1 {
 }
 
 .blog-post p.blog-post-summary,
-.blog-post-container p.blog-post-summary {
+.blog-post-container p.blog-post-summary,
+.algori-container p.algori-summary {
     font-size: small;
     font-style: italic;
     color: #666666;
@@ -201,11 +202,6 @@ header {
     padding-bottom: 0 !important;
 }
 
-.isso-thread {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-}
-
 .isso-thread .auth-section {
     border-top: 1px solid #a6a6a6;
     margin-top: 0.5em;
@@ -221,6 +217,12 @@ header {
     .isso-thread .auth-section {
         width: 33%;
     }
+}
+
+/* Algori */
+.algori-func {
+    font-size: x-large;
+    text-align: center;
 }
 
 /* ISSO */

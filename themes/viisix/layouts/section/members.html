@@ -5,7 +5,7 @@
         {{ partial "header.html" . }}
 
         <section id="main" class="mx3">
-            <h2>Our members</h2>
+            <h1>Our members</h1>
             {{ range .Data.Pages }}
                 {{ if eq .Type "members" }}
                     <div class="member clearfix mb2">

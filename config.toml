@@ -2,6 +2,7 @@ languageCode = "en-us"
 title = "ViiSiX"
 baseURL = "https://viisix.space/"
 theme = "viisix"
+enableRobotsTXT = "true"
 
 [params]
   facebook_app_id = "1468082743254961"
