@@ -1,8 +1,9 @@
 +++
 date = "2017-05-24T23:35:11+07:00"
-keywords = ["viisix"]
+keywords = ["viisix", "pso", "swarm intelligent", "particle swarm optimization", "algoriJS"]
 summary = "PSO is an optimization technique using randomly positions and velocity of particles in a population."
 algo_avatar = "PSO_2xsinx2_cropped.gif"
+Feature_Image = "/algorijs/images/pso_cover.jpg"
 algo_avatar_summary = "Example PSO for `f(x)=2xsin(x^2)`"
 title = "Particles Swarm Optimization"
 js_libs = ["pso.js"]
@@ -11,7 +12,7 @@ js_libs = ["pso.js"]
 
 ## About Particle Swarm Optimization (PSO)
 
-PSO is one of the *swarm intelligent*'s algorithm which simulated
+PSO is one of the *swarm intelligent*'s algorithms which simulated
 the movements of particles in a bird flock or fish school to perform an optimization
 on a problem without mathematical solving. This algorithm is having an 
 amazing speed on complex problems with many input elements or large area of search space. 
