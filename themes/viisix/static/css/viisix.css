@@ -30,8 +30,46 @@ h1 {
 }
 
 @media (max-width: 599px) {
+    body {
+        font-size: x-small;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: .25em;
+        margin-bottom: .25em;
+    }
+
+    p {
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    #container {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    #nav {
+        padding-left: 0;
+    }
+
+    #main {
+        margin-right: .5rem;
+        margin-left: .5rem;
+    }
+
     .v-hide-less-600 {
         display: none;
+    }
+
+    .member-avatar, .project-avatar {
+        padding: 0.5em;
+        float: none;
+        width: 100% !important;
+    }
+
+    .member-content, .project-summary {
+        margin-top: 0.5em !important;
     }
 }
 
