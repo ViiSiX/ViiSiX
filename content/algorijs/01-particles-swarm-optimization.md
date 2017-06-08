@@ -7,6 +7,7 @@ Feature_Image = "/algorijs/images/pso_cover.jpg"
 algo_avatar_summary = "Example PSO for `f(x)=2xsin(x^2)`"
 title = "Particles Swarm Optimization"
 js_libs = ["pso.js"]
+author = "Trong-Nghia Nguyen"
 
 +++
 

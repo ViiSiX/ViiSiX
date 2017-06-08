@@ -1,30 +1,34 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="px2">
-        {{ partial "header.html" . }}
+    <div class="vh100 flex flex-column">
+        <div class="px2 flex-auto">
+            {{ partial "header.html" . }}
 
-        <section id="main" class="mx3">
-            <h1>Our members</h1>
-            {{ range .Data.Pages }}
-                {{ if eq .Type "members" }}
-                    <div class="member clearfix mb2">
-                        <div class="member-avatar right p2 mr1">
-                            <h4>{{ .Params.full_name }}</h4>
-                            {{ if .Params.avatar }}
-                            <img src="{{ .Site.BaseURL }}/images/{{ .Params.avatar }}"
-                                 alt="{{ .Params.full_name }}'s avatar"
-                                 class="member-avatar-img"
-                            />
-                            {{ end }}
+            <section id="main" class="mx3">
+                <h1>Our members</h1>
+                {{ range .Data.Pages }}
+                    {{ if eq .Type "members" }}
+                        <div class="member clearfix mb2">
+                            <div class="member-avatar right p2 mr1">
+                                <h4>{{ .Params.full_name }}</h4>
+                                {{ if .Params.avatar }}
+                                <img src="{{ .Site.BaseURL }}/images/{{ .Params.avatar }}"
+                                     alt="{{ .Params.full_name }}'s avatar"
+                                     class="member-avatar-img"
+                                />
+                                {{ end }}
+                            </div>
+                            <div class="member-content overflow-hidden px2">
+                                {{ .Content }}
+                            </div>
                         </div>
-                        <div class="member-content overflow-hidden px2">
-                            {{ .Content }}
-                        </div>
-                    </div>
+                    {{ end }}
                 {{ end }}
-            {{ end }}
-        </section>
+            </section>
+        </div>
+
+        {{ partial "footer.html" . }}
     </div>
 </body>
 </html>
