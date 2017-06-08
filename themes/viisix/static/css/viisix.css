@@ -19,13 +19,25 @@ h1 {
     font-size: 2rem;
 }
 
-.vh100 {
+.v-min-h100 {
     min-height: 100vh;
 }
 
 @media (min-width: 52em) {
     .v-md-col-2 {
         width: 15.33333% !important;
+    }
+}
+
+@media (max-width: 599px) {
+    .v-hide-less-600 {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .v-show-less-600 {
+        display: none;
     }
 }
 
