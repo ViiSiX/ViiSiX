@@ -1,12 +1,12 @@
-<header class="py3">
-    <div>
+<header class="py1">
+    <a href="{{ .Site.BaseURL }}" class="mt1 text-decoration-none black">
         <img src="{{ .Site.BaseURL }}/images/logo150x84.png"
              alt="{{ .Title }}"
              style="max-width: 100px"
         />
         <span class="h4">fun tech researching</span>
-    </div>
-    <nav id="nav" class="pl2 my2" style="max-width: 768px">
+    </a>
+    <nav id="nav" class="pl2 my2">
         <div class="mxn2 flex flex-wrap">
             {{ range .Site.Menus.main }}
             <div class="col-6 sm-col-4 v-md-col-2" style="text-align: center">

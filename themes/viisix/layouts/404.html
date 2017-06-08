@@ -1,12 +1,16 @@
 {{ partial "head.html" . }}
 <body>
-    <div class="px2">
-        {{ partial "header.html" . }}
+    <div class="vh100 flex flex-column">
+        <div class="px2 flex-auto">
+            {{ partial "header.html" . }}
 
-        <section id="main" class="py3">
-            <h1 class="px2">404 Page not found!</h1>
-            <h3 class="px2">Are you sure you are not getting lost?</h3>
-        </section>
+            <section id="main" class="py3">
+                <h1 class="px2">404 Page not found!</h1>
+                <h3 class="px2">Are you sure you are not getting lost?</h3>
+            </section>
+        </div>
+
+        {{ partial "footer.html" . }}
     </div>
 </body>
 </html>

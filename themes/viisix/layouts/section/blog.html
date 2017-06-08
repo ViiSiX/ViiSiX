@@ -1,33 +1,37 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="px2">
-        {{ partial "header.html" . }}
+    <div class="vh100 flex flex-column">
+        <div class="px2 flex-auto">
+            {{ partial "header.html" . }}
 
-        <section id="main" class="mx3">
-            {{ range .Data.Pages }}
-            <div class="blog-post px1 mb1">
-                {{ if eq .Type "blog" }}
-                    <h2 class="mt1 mb0">
-                        <a href="{{ .Permalink }}"
-                           class="color-inherit text-decoration-none hover-underline"
-                        >{{ .Title }}</a>
-                    </h2>
-                    <p class="blog-post-author mt0 mb1">By: {{.Params.Author}}</p>
-                    {{ if .Params.feature_image }}
-                        <div class="feature-image-container mb1">
-                            <img src="{{ .Site.BaseURL }}/{{ .Params.Feature_Image }}"
-                                 alt="Feature image of {{ .Title }}"
-                                 class="feature-image"
-                                 style="transform: translate(0, -{{ .Params.Feature_Image_V_Adjust }}%);"
-                            >
-                        </div>
+            <section id="main" class="mx3">
+                {{ range .Data.Pages }}
+                <div class="blog-post px1 mb1">
+                    {{ if eq .Type "blog" }}
+                        <h2 class="mt1 mb0">
+                            <a href="{{ .Permalink }}"
+                               class="color-inherit text-decoration-none hover-underline"
+                            >{{ .Title }}</a>
+                        </h2>
+                        <p class="blog-post-author mt0 mb1">By: {{.Params.Author}}</p>
+                        {{ if .Params.feature_image }}
+                            <div class="feature-image-container mb1">
+                                <img src="{{ .Site.BaseURL }}/{{ .Params.Feature_Image }}"
+                                     alt="Feature image of {{ .Title }}"
+                                     class="feature-image"
+                                     style="transform: translate(0, -{{ .Params.Feature_Image_V_Adjust }}%);"
+                                >
+                            </div>
+                        {{ end }}
+                        <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
                     {{ end }}
-                    <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
+                </div>
                 {{ end }}
-            </div>
-            {{ end }}
-        </section>
+            </section>
+        </div>
+
+        {{ partial "footer.html" }}
     </div>
 </body>
 </html>

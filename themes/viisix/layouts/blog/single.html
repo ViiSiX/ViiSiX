@@ -1,53 +1,57 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="px2">
-        {{ partial "header.html" . }}
+    <div class="vh100 flex flex-column">
+        <div class="px2 flex-auto">
+            {{ partial "header.html" . }}
 
-        <section id="main" class="mx3" style="padding-bottom: 0 !important;">
-            <div class="blog-post-container px1">
-                <h1 class="mt1 mb0">{{ .Title }}</h1>
-                <p class="blog-post-author mt0 mb1">By: {{.Params.Author}}</p>
-                <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
-                <div class="blog-post-content">
-                    {{ .Content }}
-                </div>
-                <div
-                        class="fb-like"
-                        data-share="true"
-                        data-width="450"
-                        data-show-faces="true">
-                </div>
-                <script type="text/javascript">
-                    function delayClassAdding(className) {
-                        if (window.jQuery) {
-                            $('code').addClass(className)
-                        } else {
-                            setTimeout(function () { delayClassAdding(className) }, 50)
+            <section id="main" class="mx3" style="padding-bottom: 0 !important;">
+                <div class="blog-post-container px1">
+                    <h1 class="mt1 mb0">{{ .Title }}</h1>
+                    <p class="blog-post-author mt0 mb1">By: {{.Params.Author}}</p>
+                    <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
+                    <div class="blog-post-content">
+                        {{ .Content }}
+                    </div>
+                    <div
+                            class="fb-like"
+                            data-share="true"
+                            data-width="450"
+                            data-show-faces="true">
+                    </div>
+                    <script type="text/javascript">
+                        function delayClassAdding(className) {
+                            if (window.jQuery) {
+                                $('code').addClass(className)
+                            } else {
+                                setTimeout(function () { delayClassAdding(className) }, 50)
+                            }
                         }
+
+                        delayClassAdding('prettyprint');
+                    </script>
+                </div>
+            </section>
+            <script data-isso="https://comments.viisix.space"
+                    data-isso-css="false"
+                    data-isso-require-email="true"
+                    src="https://comments.viisix.space/js/embed.min.js"
+            ></script>
+            <section id="isso-thread" class="isso-thread mx3 pr1"></section>
+            <script type="text/javascript">
+                function delayPrettify() {
+                    if (window.PR) {
+                        setTimeout(PR.prettyPrint, 50)
+                    } else {
+                        setTimeout(function () { delayPrettify() }, 50)
                     }
-
-                    delayClassAdding('prettyprint');
-                </script>
-            </div>
-        </section>
-        <script data-isso="https://comments.viisix.space"
-                data-isso-css="false"
-                data-isso-require-email="true"
-                src="https://comments.viisix.space/js/embed.min.js"
-        ></script>
-        <section id="isso-thread" class="isso-thread mx3 pr1"></section>
-        <script type="text/javascript">
-            function delayPrettify() {
-                if (window.PR) {
-                    setTimeout(PR.prettyPrint, 50)
-                } else {
-                    setTimeout(function () { delayPrettify() }, 50)
                 }
-            }
 
-            delayPrettify()
-        </script>
+                delayPrettify()
+            </script>
+        </div>
+
+        {{ partial "footer.html" . }}
     </div>
 </body>
 </html>

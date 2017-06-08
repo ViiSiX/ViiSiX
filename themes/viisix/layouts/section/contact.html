@@ -1,12 +1,16 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="px2">
-        {{ partial "header.html" . }}
+    <div class="vh100 flex flex-column">
+        <div class="px2 flex-auto">
+            {{ partial "header.html" . }}
 
-        <section id="main" class="mx3">
-            {{ partial "google_contact_form.html" . }}
-        </section>
+            <section id="main" class="mx3">
+                {{ partial "google_contact_form.html" . }}
+            </section>
+        </div>
+
+        {{ partial "footer.html" }}
     </div>
 </body>
 </html>

@@ -1,19 +1,30 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="px2">
-        {{ partial "header.html" . }}
+    <script type="text/javascript">
+        var searchIndex = JSON.parse('{{ partial "search_index.html" . }}');
+    </script>
+    <script async src="{{ .Site.BaseURL }}js/search.js?v={{ .Site.Params.Version }}"></script>
+    <div class="vh100 flex flex-column">
+        <div class="px2 flex-auto">
+            {{ partial "header.html" . }}
 
-        <section id="main" class="mx3">
-            {{ range .Data.Pages }}
-                {{ if eq .Type "index" }}
-                    <h1>
-                        {{ .Title }}
-                    </h1>
-                    {{ .Content }}
+            <main id="main" class="mx3">
+                {{ range .Data.Pages }}
+                    {{ if eq .Type "index" }}
+                        <h1>
+                            {{ .Title }}
+                        </h1>
+                        {{ .Content }}
+                    {{ end }}
                 {{ end }}
-            {{ end }}
-        </section>
+
+                <h3>Search our contents</h3>
+                <div id="search-box"></div>
+            </main>
+        </div>
+
+        {{ partial "footer.html" . }}
     </div>
 </body>
 </html>
