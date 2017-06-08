@@ -45,11 +45,16 @@ class SearchResults extends React.Component {
         });
         for (let i in results) {
             result_rows.push(
-                <a key={i} className="pl1 pb1 flex text-decoration-none hover-underline black"
+                <a key={i} className="pl1 pb1 flex flex-wrap text-decoration-none black"
                    href={results[i].uri}
                 >
-                    <span className="bold italic inline-block col col-2">{capitalize(results[i].type)}</span>
-                    <span className="bold inline-block">{results[i].title}</span>
+                    <span className="col-2 inline-block bold italic v-hide-less-600">
+                        {capitalize(results[i].type)}
+                    </span>
+                    <div className="inline-block">
+                        <span className="bold v-show-less-600">&rsaquo;&nbsp;</span>
+                        <span className="bold hover-underline">{results[i].title}</span>
+                    </div>
                 </a>
             )
         }

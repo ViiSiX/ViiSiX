@@ -5,7 +5,7 @@
         var searchIndex = JSON.parse('{{ partial "search_index.html" . }}');
     </script>
     <script async src="{{ .Site.BaseURL }}js/search.js?v={{ .Site.Params.Version }}"></script>
-    <div class="vh100 flex flex-column">
+    <div class="v-min-h100 flex flex-column">
         <div class="px2 flex-auto">
             {{ partial "header.html" . }}
 
