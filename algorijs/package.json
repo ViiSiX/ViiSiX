@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Algorithm Demos by Javascript",
   "author": "Trong-Nghia Nguyen <nghia@viisix.space>",
-  "repository": "https://github.com/scattm/ViiSiX",
+  "repository": "https://github.com/ViiSiX/ViiSiX",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.24.1",
