@@ -1,1 +1,5 @@
-{{- $.Scratch.Add "index" slice -}}{{- range $page := where .Data.Pages "Type" "in" (slice "algorijs" "blog" "projects") -}}{{- $.Scratch.Add "index" (dict "objectID" $page.Date.Unix "title" (htmlEscape $page.Title) "uri" $page.Permalink "summary" (plainify $page.Params.summary) "author" $page.Params.author "type" $page.Type) -}}{{- end -}}{{- $.Scratch.Get "index" | jsonify -}}
+{{- $.Scratch.Add "index" slice -}}
+{{- range $page := where .Data.Pages "Type" "in" (slice "algorijs" "blog" "projects") -}}
+    {{- $.Scratch.Add "index" (dict "objectID" $page.Date.Unix "title" (htmlEscape $page.Title) "uri" $page.Permalink "summary" (plainify $page.Params.summary) "author" $page.Params.author "type" $page.Type) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

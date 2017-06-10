@@ -2,7 +2,7 @@
 <body>
     {{ partial "facebook_sdk.html" . }}
     <div class="v-min-h100 flex flex-column">
-        <div class="px2 flex-auto">
+        <div id="container" class="px2 flex-auto">
             {{ partial "header.html" . }}
 
             <section id="main" class="mx3">
@@ -27,7 +27,7 @@
 
                                         {{ end }}
                                     </div>
-                                    <div class="project-summary overflow-hidden pr1 pt3">
+                                    <div class="project-summary overflow-hidden pr1 mt3">
                                         {{ .Params.Summary }}
                                     </div>
                                 </div>
