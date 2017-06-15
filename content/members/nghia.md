@@ -8,6 +8,7 @@ title = "nghia"
 
 Data Engineer with the background of a System Administrator. Nghia
 has experiences in many fields of Information Technology from his works
-and technology interests. Currently, Nghia’s current fields of studying
-are Data Analysis, Natural Language Processing and Business Information
-System.
+and technology interests. 
+
+Currently, Nghia’s current fields of studying are Data Analysis, 
+Natural Language Processing and Business Information System.
