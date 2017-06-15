@@ -7,7 +7,7 @@
 
             <section id="main" class="mx3">
                 <h1>Our members</h1>
-                {{ range .Data.Pages }}
+                {{ range sort .Data.Pages.ByDate }}
                     {{ if eq .Type "members" }}
                         <div class="member clearfix mb2">
                             <div class="member-avatar right p2 mr1">
@@ -19,7 +19,7 @@
                                 />
                                 {{ end }}
                             </div>
-                            <div class="member-content overflow-hidden px2">
+                            <div class="overflow-hidden px2 justify pt2">
                                 {{ .Content }}
                             </div>
                         </div>
