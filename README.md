@@ -3,11 +3,16 @@ ViiSiX
 
 ViiSiX content generate source code by Go Hugo. Contents are written using Markdown.
 
-1. Run on your local machine
+1. Run on your local machine (Requirement: Docker is installed)
 
-Go to the source code directory, issue this command
+Go to the source code directory, issue following commands:
 
-`$ hugo server`
+```
+$ make setup
+$ make server
+```
+
+Then navigate to http://localhost:1313 to see the website.
 
 2. Add content
 
@@ -17,21 +22,23 @@ We have 3 kinds of content:
 - members
 - projects
 
-Depend on content type, issue the following command
+Depend on content type, issue the following commands:
 
-`$ hugo new <content-type>/>content-url>.md`
+```
+$ make blog BLOG=nice-blog
+$ make project PROJECT=awesome-project
+$ make member MEMBER=handsome-sysadmin
+```
 
-For example
-
-`$ hugo new blog/hello-world.md`
-
-Then you can edit `/content/blog/hello-world.md`, input your content.
+Then you can edit `/content/blog/nice-blog.md`, input your content.
 
 3. Generate public html files
 
-Go to the source code directory, issue
+Go to the source code directory, issue:
 
-`$ hugo`
+```
+$ make public
+```
 
 Static web will be generated at `public` directory, you can now upload it
 to a web server.
