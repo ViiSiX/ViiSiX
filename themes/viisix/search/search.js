@@ -48,12 +48,12 @@ class SearchResults extends React.Component {
                 <a key={i} className="pl1 pb1 flex flex-wrap text-decoration-none black"
                    href={results[i].uri}
                 >
-                    <span className="col-2 inline-block bold italic v-hide-less-600">
+                    <span className="col-2 inline-block bold v-hide-less-600">
                         {capitalize(results[i].type)}
                     </span>
                     <div className="inline-block">
-                        <span className="bold v-show-less-600">&rsaquo;&nbsp;</span>
-                        <span className="bold hover-underline">{results[i].title}</span>
+                        <span className="v-show-less-600">&rsaquo;&nbsp;</span>
+                        <span className="hover-underline">{results[i].title}</span>
                     </div>
                 </a>
             )

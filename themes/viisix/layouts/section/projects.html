@@ -1,35 +1,33 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="v-min-h100 flex flex-column">
-        <div id="container" class="px2 flex-auto">
+    <div class="v-min-h100 mx-auto flex flex-column">
+        <div id="container" class="h-max-80 px2 flex-auto mx-auto">
             {{ partial "header.html" . }}
 
             <section id="main" class="mx3">
-                <h1>Our projects</h1>
+                <h1 class="mt0">Our projects</h1>
                 <div class="project-list">
                     {{ range .Data.Pages }}
                         {{ if eq .Type "projects" }}
                             <a href="{{ .Permalink }}"
-                               class="color-inherit text-decoration-none"
+                               class="color-inherit text-decoration-none project clearfix block"
                             >
-                                <div class="project clearfix mb1">
-                                    <div class="project-avatar left p1">
-                                        <h4>
-                                            {{ .Title}}
-                                        </h4>
-                                        {{ if .Params.avatar }}
-                                            <img src="{{ .Site.BaseURL }}/projects/{{ .Params.avatar }}"
-                                                 alt="{{ .Title }}'s avatar"
-                                                 class="project-avatar-img"
-                                                 width="100"
-                                            />
+                                <div class="project-avatar p1 left">
+                                    {{ if .Params.avatar }}
+                                        <img src="{{ .Site.BaseURL }}/projects/{{ .Params.avatar }}"
+                                             alt="{{ .Title }}'s avatar"
+                                             class="project-avatar-img"
+                                             width="100"
+                                        />
 
-                                        {{ end }}
-                                    </div>
-                                    <div class="project-summary overflow-hidden pr1 mt3">
-                                        {{ .Params.Summary }}
-                                    </div>
+                                    {{ end }}
+                                </div>
+                                <div class="project-summary overflow-hidden justify pt1">
+                                    <h4>
+                                        {{ .Title}}
+                                    </h4>
+                                    <p>{{ .Params.Summary }}</p>
                                 </div>
                             </a>
                         {{ end }}

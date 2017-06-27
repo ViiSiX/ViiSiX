@@ -1,5 +1,5 @@
 +++
-avatar = "nghiant.jpg"
+avatar = "nghiant2.jpg"
 full_name = "Trong-Nghia Nguyen"
 date = "2017-04-10T17:18:07+07:00"
 title = "nghia"

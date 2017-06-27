@@ -8,9 +8,9 @@ enableRobotsTXT = "true"
   facebook_app_id = "1468082743254961"
   google_analytics = "UA-76194783-4"
   contact_iframe = 'https://docs.google.com/forms/d/e/1FAIpQLSfhqdXEH-YtUM9ipkdEKwRfqmdX2834qqfD4yk3SUXSWJFIhQ/viewform?embedded=true'
-  contact_iframe_width = 680
+  contact_iframe_width = 800
   contact_iframe_height = 1000
-  version = "r7_00"
+  version = "r8_00"
 
 [[menu.main]]
   name = "Home"
