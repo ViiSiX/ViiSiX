@@ -3,20 +3,49 @@
 }
 
 body {
-    font-family: "Courier New", Courier, monospace;
-    line-height: 1.5;
+    font-family: "DDG_ProximaNova","DDG_ProximaNova_UI_0","DDG_ProximaNova_UI_1","DDG_ProximaNova_UI_2","DDG_ProximaNova_UI_3","DDG_ProximaNova_UI_4","DDG_ProximaNova_UI_5","DDG_ProximaNova_UI_6","Proxima Nova","Helvetica Neue","Helvetica","Segoe UI","Nimbus Sans L","Liberation Sans","Open Sans",FreeSans,Arial,sans-serif;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -moz-font-feature-settings: "liga" on;
+    font-size: 16px;
+
     margin:0;color: #111;
     background-color: #fff;
-    max-width: 768px;
+}
+
+nav {
+    font-size: 14px;
+}
+
+footer {
+    font-size: x-small;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.25;
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
 }
 
 .v-min-h100 {
@@ -26,6 +55,12 @@ h1 {
 @media (min-width: 52em) {
     .v-md-col-2 {
         width: 15.33333% !important;
+    }
+}
+
+@media (min-width: 600px) {
+    .h-max-80 {
+        width: 80%;
     }
 }
 
@@ -96,25 +131,25 @@ h1 {
     letter-spacing: 3px;
 }
 
-.member, .project, .blog-post, .blog-post-container, .algori, .algori-container {
-    border: 1px solid #a6a6a6;
-    border-right: 2px solid #a6a6a6;
-    border-bottom: 2px solid #a6a6a6;
-    margin-right: .5rem;
+.member, .project, .algori, .algori-container {
+    border-left: 1px solid #ececec;
 }
 
 .project-list a .project, .algori-list a .algori {
-    max-width: 350px;
+    max-width: 45%;
 }
 
-.project-list a .project:hover, .algori-list a .algori:hover {
-    border: 2px solid #a6a6a6;
-    border-right: 1px solid #a6a6a6;
-    border-bottom: 1px solid #a6a6a6;
+.project-list a:hover, .algori-list a .algori:hover {
+    border: 1px solid #ececec;
+    border-left: 2px solid #ececec;
+}
+
+.blog-post:hover h2 {
+    text-decoration: underline;
 }
 
 .member h4, .project h4 {
-    margin: 0 0 1.5em;
+    margin: 0 0 1em;
 }
 
 .project-list h4 {
@@ -209,10 +244,17 @@ h1 {
 }
 
 .blog-post .feature-image-container {
-    width: 100%;
+    width: 25%;
     height: 0;
-    padding-top: 50%;
+    padding-top: 12.5%;
     overflow: hidden;
+}
+
+@media (max-width: 599px) {
+    .blog-post .feature-image-container {
+        width: 100%;
+        padding-top: 50%;
+    }
 }
 
 .blog-post .feature-image-container .feature-image {
@@ -479,5 +521,5 @@ header {
 }
 
 .searchResult {
-    height: 35vh;
+    height: 45vh;
 }

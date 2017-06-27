@@ -2,7 +2,7 @@
 author = "Trong-Nghia Nguyen"
 date = "2017-06-10T15:59:56+07:00"
 feature_image = "/logo/mysql.png"
-feature_image_v_adjust = 1.5
+feature_image_v_adjust = 12
 keywords = ["viisix", "viisix nghia mysql", "mysql stored procedure", "mysql user-defined function", "mysql function procedure"]
 summary = "Like other relational database management systems, MySQL allows its users to programming inside its using Stored Procedure and User-Defined Function. Here is some of my experiences working with them."
 title = "Notes about programming in MySQL"

@@ -1,34 +1,29 @@
 {{ partial "head.html" . }}
 <body>
     {{ partial "facebook_sdk.html" . }}
-    <div class="v-min-h100 flex flex-column">
-        <div id="container" class="px2 flex-auto">
+    <div class="v-min-h100 mx-auto flex flex-column">
+        <div id="container" class="h-max-80 px2 flex-auto mx-auto">
             {{ partial "header.html" . }}
 
             <section id="main" class="mx3">
                 {{ range .Data.Pages }}
-                <div class="blog-post px1 mb1">
+                <a href="{{ .Permalink }}"
+                   class="blog-post px1 mb2 color-inherit text-decoration-none block clearfix">
                     {{ if eq .Type "blog" }}
-                        <h2 class="mt1 mb0">
-                            <a href="{{ .Permalink }}"
-                               class="color-inherit text-decoration-none hover-underline"
-                            >{{ .Title }}</a>
-                        </h2>
+                        <h2 class="mt1 mb0">{{ .Title }}</h2>
                         <p class="blog-post-author mt0 mb1">By: {{.Params.Author}}</p>
                         {{ if .Params.feature_image }}
                             <div class="feature-image-container mb1">
-                                <a href="{{ .Permalink }}">
-                                    <img src="{{ .Site.BaseURL }}/{{ .Params.Feature_Image }}"
-                                         alt="Feature image of {{ .Title }}"
-                                         class="feature-image"
-                                         style="transform: translate(0, -{{ .Params.Feature_Image_V_Adjust }}%);"
-                                    >
-                                </a>
+                                <img src="{{ .Site.BaseURL }}/{{ .Params.Feature_Image }}"
+                                     alt="Feature image of {{ .Title }}"
+                                     class="feature-image"
+                                     style="transform: translate(0, -{{ .Params.Feature_Image_V_Adjust }}%);"
+                                >
                             </div>
                         {{ end }}
-                        <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
+                        <p class="blog-post-summary pt1">{{ .Params.Summary }}</p>
                     {{ end }}
-                </div>
+                </a>
                 {{ end }}
             </section>
         </div>
