@@ -14,23 +14,21 @@
                     {{ range .Data.Pages }}
                         {{ if eq .Type "algorijs" }}
                         <a href="{{ .Permalink }}"
-                           class="color-inherit text-decoration-none"
+                           class="algori mb1 px1 block rounded color-inherit text-decoration-none"
                         >
-                            <div class="algori clearfix mb1">
-                                <h4>
-                                    {{ .Title}}
-                                </h4>
-                                <div class="algori-summary">
-                                    {{ .Params.summary }}
-                                </div>
-                                <div class="algori-avatar">
-                                    <img src="{{ .Site.BaseURL }}algorijs/images/{{ .Params.algo_avatar }}"
-                                         alt="{{ .Params.algo_avatar_summary }}"
-                                         class="algori-avatar-img"
-                                    />
-                                    <div class="algori-avatar-summary">
-                                        {{ .Params.algo_avatar_summary }}
-                                    </div>
+                            <h4>
+                                {{ .Title}}
+                            </h4>
+                            <div class="algori-summary">
+                                {{ .Params.summary }}
+                            </div>
+                            <div class="algori-avatar mt1">
+                                <img src="{{ .Site.BaseURL }}algorijs/images/{{ .Params.algo_avatar }}"
+                                     alt="{{ .Params.algo_avatar_summary }}"
+                                     class="algori-avatar-img"
+                                />
+                                <div class="algori-avatar-summary pl3 italic">
+                                    {{ .Params.algo_avatar_summary }}
                                 </div>
                             </div>
                         </a>
