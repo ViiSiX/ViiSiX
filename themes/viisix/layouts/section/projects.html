@@ -11,7 +11,7 @@
                     {{ range .Data.Pages }}
                         {{ if eq .Type "projects" }}
                             <a href="{{ .Permalink }}"
-                               class="color-inherit text-decoration-none project clearfix block"
+                               class="project col col-6 color-inherit text-decoration-none clearfix block rounded"
                             >
                                 <div class="project-avatar p1 left">
                                     {{ if .Params.avatar }}
@@ -23,7 +23,7 @@
 
                                     {{ end }}
                                 </div>
-                                <div class="project-summary overflow-hidden justify pt1">
+                                <div class="project-summary pt1 pr1 overflow-hidden justify">
                                     <h4>
                                         {{ .Title}}
                                     </h4>

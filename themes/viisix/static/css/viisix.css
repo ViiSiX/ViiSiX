@@ -111,6 +111,10 @@ p {
         overflow-x: auto;
         display: block;
     }
+
+    .algori-list .algori.col-6, .project-list .project.col-6 {
+        width: 100%;
+    }
 }
 
 @media (min-width: 600px) {
@@ -131,17 +135,12 @@ p {
     letter-spacing: 3px;
 }
 
-.member, .project, .algori, .algori-container {
-    border-left: 1px solid #ececec;
+.project-list .project, .algori-list .algori {
+    border: 1px solid #fff;
 }
 
-.project-list a .project, .algori-list a .algori {
-    max-width: 45%;
-}
-
-.project-list a:hover, .algori-list a .algori:hover {
+.project-list a:hover, .algori-list a:hover {
     border: 1px solid #ececec;
-    border-left: 2px solid #ececec;
 }
 
 .blog-post:hover h2 {
@@ -156,13 +155,7 @@ p {
     margin-bottom: 0.5em;
 }
 
-.algori h4 {
-    margin-top: .5rem;
-    margin-left: 1rem;
-    margin-bottom: .5rem;
-}
-
-.member-avatar, .project-avatar, .algori-avatar {
+.member-avatar, .project-avatar {
     text-align: center;
 }
 
@@ -185,7 +178,7 @@ p {
 }
 
 .algori-avatar-img {
-    width: 98%;
+    max-height: 250px;
     object-fit: inherit;
 }
 
@@ -205,10 +198,6 @@ p {
 
 .project-list a .project:hover .project-avatar-img {
     border: 1px solid #666666;
-}
-
-.algori .algori-summary {
-    margin-left: 1.5rem;
 }
 
 .project-summary {
