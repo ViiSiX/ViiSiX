@@ -323,4 +323,4 @@ up3ouns9ynhwxqcv18y6nvpva     worker2             Ready               Active
 That's all for the tutorial today. In next blog, I will show you how to bring up a service/stack in **Swarm**.
 
 ---
-Mr. Tule
+[Mr. Tule](https://about.me/tunguyen9889)
