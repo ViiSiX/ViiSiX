@@ -1,14 +1,14 @@
 +++
 author = "Tu A. Nguyen"
 date = "2017-06-26T16:28:33+07:00"
-summary = "In this guide, I will show you how to create a Docker Swarm cluster using docker-machine and Oracle VirtualBox"
+summary = "In this guide, I will show you how to create a Docker Swarm cluster using docker-machine and Oracle VirtualBox."
 title = "Get your hand dirty with Docker Swarm - Part I"
-keywords = ["viisix", "docker", "swarm"]
-feature_image = ""
-feature_image_v_adjust = 12.5
+keywords = ["viisix", "docker", "swarm", "docker swarm"]
+feature_image = "logo/docker-swarm.png"
+feature_image_v_adjust = 22.5
 
 +++
-# Installation
+## Installation
 
 Oracle VirtualBox: Download and install the package [here](https://www.virtualbox.org/wiki/Downloads).
 
@@ -17,9 +17,9 @@ Docker Machine: there are 2 ways to install `docker-machine`:
 - If you're using macOS or Windows, Docker Machine is installed along with [Docker binary](https://docs.docker.com/engine/installation/).
 - If you want only Machine binaries, can find the latest versions on the [docker/machine release page](https://github.com/docker/machine/releases/) on GitHub.
 
-# Setup
+## Setup
 
-## Provisioning docker machine VMs
+### Provisioning docker machine VMs
 
 In this lab, I will create 3 docker machine VMs to make a Swarm cluster:
 
@@ -132,7 +132,7 @@ Insecure Registries:
 Live Restore Enabled: false
 ```
 
-## Initialing Swarm cluster
+### Initialing Swarm cluster
 
 **worker1** is chosen to become Swarm manager:
 
@@ -231,7 +231,7 @@ ID                            HOSTNAME            STATUS              AVAILABILI
 4j86n5w9cg8hbrp2ilqjsra45 *   worker1             Ready               Active              Leader
 ```
 
-## Joining another machines to Swarm cluster
+### Joining another machines to Swarm cluster
 
 Did you see the output of `docker swarm init` command above, it's included the TOKEN which used for joining nodes to the cluster? If you forgot to write down it, in **Manager** node, run this command to see it:
 
