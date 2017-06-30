@@ -115,6 +115,10 @@ p {
     .algori-list .algori.col-6, .project-list .project.col-6 {
         width: 100%;
     }
+
+    .blog-post-container, .algori-container {
+        width: 92vw;
+    }
 }
 
 @media (min-width: 600px) {
