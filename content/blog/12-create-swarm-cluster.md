@@ -8,6 +8,12 @@ feature_image = "logo/docker-swarm.png"
 feature_image_v_adjust = 22.5
 
 +++
+
+## What is Docker Swarm
+
+TL;DR: **Docker Swarm** is a native clustering for Docker. It turns a pool of Docker hosts into a single, virtual host using an API proxy system.
+
+
 ## Installation
 
 Oracle VirtualBox: Download and install the package [here](https://www.virtualbox.org/wiki/Downloads).
@@ -16,6 +22,7 @@ Docker Machine: there are 2 ways to install `docker-machine`:
 
 - If you're using macOS or Windows, Docker Machine is installed along with [Docker binary](https://docs.docker.com/engine/installation/).
 - If you want only Machine binaries, can find the latest versions on the [docker/machine release page](https://github.com/docker/machine/releases/) on GitHub.
+
 
 ## Setup
 
@@ -132,6 +139,7 @@ Insecure Registries:
 Live Restore Enabled: false
 ```
 
+
 ### Initialing Swarm cluster
 
 **worker1** is chosen to become Swarm manager:
@@ -231,9 +239,10 @@ ID                            HOSTNAME            STATUS              AVAILABILI
 4j86n5w9cg8hbrp2ilqjsra45 *   worker1             Ready               Active              Leader
 ```
 
+
 ### Joining another machines to Swarm cluster
 
-Did you see the output of `docker swarm init` command above, it's included the TOKEN which used for joining nodes to the cluster? If you forgot to write down it, in **Manager** node, run this command to see it:
+Did you see the output of `docker swarm init` command above, it's included the *TOKEN* which used for joining nodes to the cluster? If you forgot to write down it, in **Manager** node, run this command to see it:
 
 ```
 $ docker swarm join-token worker
@@ -320,7 +329,9 @@ ID                            HOSTNAME            STATUS              AVAILABILI
 up3ouns9ynhwxqcv18y6nvpva     worker2             Ready               Active
 ```
 
+
 That's all for the tutorial today. In next blog, I will show you how to bring up a service/stack in **Swarm**.
+
 
 ---
 [Mr. Tule](https://about.me/tunguyen9889)
