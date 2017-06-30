@@ -259,7 +259,7 @@ p {
 
 .blog-post-container .blog-post-content a {
     font-style: italic;
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
 }
 
