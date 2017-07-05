@@ -57,5 +57,33 @@ if [ "$UPGRADING" == "1" ]; then
         > atelier-dune-light.min.css
 fi
 
+# typicons
+cd ${TEMP_DIR}
+DOWNLOAD_FILE_NAME='typicons.zip'
+UPGRADING=0
+DOWNLOAD_URL=`curl -s https://api.github.com/repos/stephenhutchings/typicons.font/releases/latest | grep zipball_url | \
+    cut -d '"' -f 4`
+curl -Ls ${DOWNLOAD_URL} > ${DOWNLOAD_FILE_NAME}
+if [ ! -f "$BASEDIR/typicons_checksum" ]; then
+    echo `md5 ${DOWNLOAD_FILE_NAME} | awk '{ print $4 }'` > ${BASEDIR}/typicons_checksum
+    UPGRADING=1
+else
+    OLD_FILE_CHECKSUM=`cat ${BASEDIR}/typicons_checksum`
+    NEW_FILE_CHECKSUM=`md5 ${DOWNLOAD_FILE_NAME} | awk '{ print $4 }'`
+    if [ "$OLD_FILE_CHECKSUM" != "$NEW_FILE_CHECKSUM" ]; then
+        UPGRADING=1
+        echo ${NEW_FILE_CHECKSUM} > ${BASEDIR}/typicons_checksum
+    fi
+fi
+if [ "$UPGRADING" == "1" ]; then
+    echo "Upgrading Typicons"
+    FILE_NAME=typicons
+    cd ${TEMPLATE_STATIC_DIR}
+    rm -rf ${FILE_NAME}
+    unzip ${TEMP_DIR}/${DOWNLOAD_FILE_NAME} -d typicons.font
+    mv typicons.font/stephen*/src/font ${FILE_NAME}
+    rm -rf typicons.font
+fi
+
 # Clean up
 cd ${BASEDIR} && rm -rf ${TEMP_DIR}

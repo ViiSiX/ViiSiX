@@ -1,16 +1,40 @@
 {{ partial "head.html" . }}
 <body>
-    {{ partial "facebook_sdk.html" . }}
-    <div class="v-min-h100 mx-auto flex flex-column">
-        <div id="container" class="h-max-80 px2 flex-auto mx-auto">
-            {{ partial "header.html" . }}
+  {{ partial "facebook_sdk.html" . }}
 
-            <section id="main" class="mx-3">
-                {{ partial "google_contact_form.html" . }}
-            </section>
+  <div class="v-min-h100 flex flex-column">
+    <div id="container" class="h-max-80 px2 flex-auto mx-auto">
+      {{ partial "header.html" . }}
+
+      <main id="main" class="mx3">
+        <img alt="Contact us banner image"
+             src="/images/contact-us.jpg"
+        />
+        <div>
+          <h1 class="h2 mb2">Contact us via</h1>
+          <h4 class="ml2">
+            <span class="typcn typcn-social-github-circular"/>
+            <a href="https://github.com/ViiSiX"
+               class="black text-decoration-none"
+            >Github</a>
+          </h4>
+          <h4 class="ml2">
+            <span class="typcn typcn-social-facebook-circular"/>
+            <a href="https://www.facebook.com/teamviisix"
+               class="black text-decoration-none"
+            >Facebook</a>
+          </h4>
+          <h4 class="ml2">
+            <span class="typcn typcn-mail"/>
+            <a href="mailto:nghia@viisix.space"
+               class="black text-decoration-none"
+            >nghia@viisix.space</a>
+          </h4>
         </div>
-
-        {{ partial "footer.html" }}
+      </main>
     </div>
+
+    {{ partial "footer.html" }}
+  </div>
 </body>
 </html>

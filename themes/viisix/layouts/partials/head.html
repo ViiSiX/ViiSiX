@@ -2,57 +2,59 @@
 {{ $isHomePage := eq .Title .Site.Title }}
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+  <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
 
-    <!-- SEO -->
-    {{ if isset .Params "keywords" }}
-        <meta content='{{ delimit .Keywords ", " }}' name="keywords"/>
+  <!-- SEO -->
+  {{ if isset .Params "keywords" }}
+    <meta content='{{ delimit .Keywords ", " }}' name="keywords"/>
+  {{ end }}
+  <meta content="{{ .Title }} &middot; {{ .Site.Title }}" property="og:title"/>
+  {{ if eq $isHomePage false }}
+    {{ if isset .Params "summary" }}
+      <meta content="{{ .Params.Summary }}" name="description"/>
+      <meta content="{{ .Params.Summary }}" property="og:description"/>
     {{ end }}
-    <meta content="{{ .Title }} &middot; {{ .Site.Title }}" property="og:title"/>
-    {{ if eq $isHomePage false }}
-        {{ if isset .Params "summary" }}
-            <meta content="{{ .Params.Summary }}" name="description"/>
-            <meta content="{{ .Params.Summary }}" property="og:description"/>
-        {{ end }}
-        {{ if isset .Params "feature_image" }}
-            <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image"/>
-            <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image:secure_url"/>
-        {{ end }}
+    {{ if isset .Params "feature_image" }}
+      <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image"/>
+      <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image:secure_url"/>
     {{ end }}
-    <meta content="{{ .Site.Params.facebook_app_id }}" property="fb:app_id"/>
-    <meta content="{{ .Permalink }}" property="og:url"/>
-    <!-- End of SEO -->
+  {{ end }}
+  <meta content="{{ .Site.Params.facebook_app_id }}" property="fb:app_id"/>
+  <meta content="{{ .Permalink }}" property="og:url"/>
+  <!-- End of SEO -->
 
-    <!-- Logo -->
-    <link rel="icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon"/>
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon"/>
+  <!-- Logo -->
+  <link rel="icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon"/>
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.png" type="image/x-icon"/>
 
-    <!-- CSS -->
-    <script type="text/javascript">
-        <!-- loadCSS minified -->
-        (function(a){var b=function(c,k,d){var l=a.document;var m=l.createElement("link");var e;if(k){e=k}else{var i=(l.body||l.getElementsByTagName("head")[0]).childNodes;e=i[i.length-1]}var f=l.styleSheets;m.rel="stylesheet";m.href=c;m.media="only x";function j(n){if(l.body){return n()}setTimeout(function(){j(n)})}j(function(){e.parentNode.insertBefore(m,(k?e:e.nextSibling))});var h=function(o){var n=m.href;var p=f.length;while(p--){if(f[p].href===n){return o()}}setTimeout(function(){h(o)})};function g(){if(m.addEventListener){m.removeEventListener("load",g)}m.media=d||"all"}if(m.addEventListener){m.addEventListener("load",g)}m.onloadcssdefined=h;h(g);return m};if(typeof exports!=="undefined"){exports.loadCSS=b}else{a.loadCSS=b}}(typeof global!=="undefined"?global:this));
-        loadCSS("{{ .Site.BaseURL }}css/viisix.min.css?v={{ .Site.Params.Version }}");
-        loadCSS("{{ .Site.BaseURL }}css/ace.min.css?v={{ .Site.Params.Version }}");
-        loadCSS("{{ .Site.BaseURL }}code-prettify/skins/atelier-dune-light.min.css?v={{ .Site.Params.Version }}");
-    </script>
-    <noscript>
-        <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/viisix.min.css?v={{ .Site.Params.Version }}"/>
-        <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/ace.min.css?v={{ .Site.Params.Version }}"/>
-        <link rel="stylesheet"
-              type="text/css"
-              href="{{ .Site.BaseURL }}code-prettify/skins/atelier-dune-light.min.css?v={{ .Site.Params.Version }}"/>
-    </noscript>
-    <!-- End of CSS -->
+  <!-- CSS -->
+  <script type="text/javascript">
+    <!-- loadCSS minified -->
+    (function(a){var b=function(c,k,d){var l=a.document;var m=l.createElement("link");var e;if(k){e=k}else{var i=(l.body||l.getElementsByTagName("head")[0]).childNodes;e=i[i.length-1]}var f=l.styleSheets;m.rel="stylesheet";m.href=c;m.media="only x";function j(n){if(l.body){return n()}setTimeout(function(){j(n)})}j(function(){e.parentNode.insertBefore(m,(k?e:e.nextSibling))});var h=function(o){var n=m.href;var p=f.length;while(p--){if(f[p].href===n){return o()}}setTimeout(function(){h(o)})};function g(){if(m.addEventListener){m.removeEventListener("load",g)}m.media=d||"all"}if(m.addEventListener){m.addEventListener("load",g)}m.onloadcssdefined=h;h(g);return m};if(typeof exports!=="undefined"){exports.loadCSS=b}else{a.loadCSS=b}}(typeof global!=="undefined"?global:this));
+    loadCSS("{{ .Site.BaseURL }}css/viisix.min.css?v={{ .Site.Params.Version }}");
+    loadCSS("{{ .Site.BaseURL }}css/ace.min.css?v={{ .Site.Params.Version }}");
+    loadCSS("{{ .Site.BaseURL }}typicons/typicons.min.css?v={{ .Site.Params.Version }}");
+    loadCSS("{{ .Site.BaseURL }}code-prettify/skins/atelier-dune-light.min.css?v={{ .Site.Params.Version }}");
+  </script>
+  <noscript>
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/viisix.min.css?v={{ .Site.Params.Version }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/ace.min.css?v={{ .Site.Params.Version }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}typicons/typicons.min.css?v={{ .Site.Params.Version }}"/>
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{ .Site.BaseURL }}code-prettify/skins/atelier-dune-light.min.css?v={{ .Site.Params.Version }}"/>
+  </noscript>
+  <!-- End of CSS -->
 
-    <!-- Javascript -->
-    <script async src="{{ .Site.BaseURL }}js/jquery-3.2.1.min.js?v={{ .Site.Params.Version }}"></script>
-    <script async
-            src="{{ .Site.BaseURL }}code-prettify/prettify.js?v={{ .Site.Params.Version }}"
-    ></script>
-    <!-- End of Javascript -->
+  <!-- Javascript -->
+  <script async src="{{ .Site.BaseURL }}js/jquery-3.2.1.min.js?v={{ .Site.Params.Version }}"></script>
+  <script async
+          src="{{ .Site.BaseURL }}code-prettify/prettify.js?v={{ .Site.Params.Version }}"
+  ></script>
+  <!-- End of Javascript -->
 
-    {{ partial "google_analytics" . }}
+  {{ partial "google_analytics" . }}
 </head>
