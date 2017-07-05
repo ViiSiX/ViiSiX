@@ -271,10 +271,17 @@ p {
     text-decoration: underline;
 }
 
-.blog-post-container .blog-post-content pre,
-.blog-post-container .blog-post-content code
+.blog-post-container .blog-post-content pre
 {
     overflow: scroll;
+    background-color: rgb(215, 228, 215);
+}
+
+.blog-post-container .blog-post-content pre code {
+    background: none;
+}
+
+.blog-post-container .blog-post-content p code {
     background-color: rgba(215, 228, 215, 0.6);
 }
 
