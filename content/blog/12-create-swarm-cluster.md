@@ -145,14 +145,14 @@ Live Restore Enabled: false
 **worker1** is chosen to become Swarm manager:
 
 ```
-$ docker swarm init --advertise-addr 192.168.99.100
-Swarm initialized: current node (4j86n5w9cg8hbrp2ilqjsra45) is now a manager.
+$ docker swarm init --advertise-addr $(docker-machine ip worker1)
+Swarm initialized: current node (lcr3z1l1ltfgjwx3und7yicvp) is now a manager.
 
 To add a worker to this swarm, run the following command:
 
-    docker swarm join --token SWMTKN-1-0f55oel26f96bld5l87zhp67bancll22k5dm413zy08e37h15r-cx4bdqsgzy1qfl1q8toyz9cx2 192.168.99.100:2377
+    docker swarm join --token SWMTKN-1-0yzy2q9vs9zjaqnheb8jv3up9h0avthk62k4yl6z32gzc11uz0-ez5cwtxzzoy8yeiv8dl3jr6on 192.168.99.100:2377
 
-To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+    To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 ```
 
 `docker info` shows **Swarm** mode has been activated:
@@ -236,7 +236,7 @@ Check **Swarm** status:
 ```
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS
-4j86n5w9cg8hbrp2ilqjsra45 *   worker1             Ready               Active              Leader
+lcr3z1l1ltfgjwx3und7yicvp *   worker1             Ready               Active              Leader
 ```
 
 
@@ -248,14 +248,20 @@ Did you see the output of `docker swarm init` command above, it's included the *
 $ docker swarm join-token worker
 To add a worker to this swarm, run the following command:
 
-    docker swarm join --token SWMTKN-1-0f55oel26f96bld5l87zhp67bancll22k5dm413zy08e37h15r-cx4bdqsgzy1qfl1q8toyz9cx2 192.168.99.100:2377
+    docker swarm join --token SWMTKN-1-0yzy2q9vs9zjaqnheb8jv3up9h0avthk62k4yl6z32gzc11uz0-ez5cwtxzzoy8yeiv8dl3jr6on 192.168.99.100:2377
 ```
 
 Connect to the other Docker Engine VMs and join them into the cluster:
 
 ```
+$ TOKEN=$(docker swarm join-token -q worker)
+$ for i in 2 3; do
+>   eval $(docker-machine env worker$i)
+>   docker swarm join --token $TOKEN $(docker-machine ip worker1):2377
+>done
+This node joined a swarm as a worker.
+This node joined a swarm as a worker.
 $ eval $(docker-machine env worker2)
-$ docker swarm join --token SWMTKN-1-0f55oel26f96bld5l87zhp67bancll22k5dm413zy08e37h15r-cx4bdqsgzy1qfl1q8toyz9cx2 192.168.99.100:2377
 $ docker info
 Containers: 0
  Running: 0
@@ -324,9 +330,9 @@ Connect to **manager** node and check cluster status:
 $ eval $(docker-machine env worker1)
 $ docker node ls
 ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS
-4j86n5w9cg8hbrp2ilqjsra45 *   worker1             Ready               Active              Leader
-9stuyaszvo3m8lvothnhqwccy     worker3             Ready               Active
-up3ouns9ynhwxqcv18y6nvpva     worker2             Ready               Active
+l1szkqkhh7scvimcv2ucw6ht4     worker3             Ready               Active
+lcr3z1l1ltfgjwx3und7yicvp *   worker1             Ready               Active              Leader
+lrd76tmvsboy6hf9hya5t0dym     worker2             Ready               Active
 ```
 
 
