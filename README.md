@@ -3,13 +3,21 @@ ViiSiX
 
 ViiSiX content generate source code by Go Hugo. Contents are written using Markdown.
 
-1. Run on your local machine (Requirement: Docker is installed)
+1. Run on your local machine
 
 Go to the source code directory, issue following commands:
 
+a. Using Docker
 ```
+// Setup Docker image
 $ make setup
+// Running Hugo web server using Docker
 $ make server
+```
+b. Without Docker
+
+```
+$ hugo server
 ```
 
 Then navigate to http://localhost:1313 to see the website.
@@ -24,10 +32,18 @@ We have 3 kinds of content:
 
 Depend on content type, issue the following commands:
 
+a. With Docker
 ```
 $ make blog BLOG=nice-blog
 $ make project PROJECT=awesome-project
 $ make member MEMBER=handsome-sysadmin
+```
+
+b. Without Docker
+```
+$ hugo new blog/nice-blog.md
+$ hugo new project/awesome-project
+$ hugo new member/handsome-sysadmin
 ```
 
 Then you can edit `/content/blog/nice-blog.md`, input your content.
@@ -36,8 +52,14 @@ Then you can edit `/content/blog/nice-blog.md`, input your content.
 
 Go to the source code directory, issue:
 
+a. With Docker
 ```
 $ make public
+```
+
+b. Without Docker
+```
+$ hugo
 ```
 
 Static web will be generated at `public` directory, you can now upload it
