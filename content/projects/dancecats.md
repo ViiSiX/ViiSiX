@@ -2,7 +2,7 @@
 date = "2017-04-10T21:17:30+07:00"
 title = "DanceCats"
 avatar = "DanceCats.png"
-project_url = "https://github.com/DanceCats"
+project_url = "https://dancecats.viisix.space"
 summary = "DanceCats is an open source tool used to generate Data reports using web interface."
 
 +++
@@ -20,14 +20,8 @@ complexity tools.
 
 ### Current Version
 
-Please read our [user manual](http://dancecat.meonhun.com/manual.html).
+Please read our [user manual for v0.1.2](https://dancecats.viisix.space/wiki/TitleIndex).
 
 ### What is next?
 
-We are working on upgrading it to support more features:
-
-- Support bigger data sets
-- Better permission control
-- Support ETL and data pipeline
-- Support plug-in to support more data source types and more options
-to do with the results
+We are working on moving DanceCats to new version v0.2.0.
