@@ -18,6 +18,10 @@ upgrade it to new version.
 It's fast and suitable for making small reports, without using other
 complexity tools.
 
+### Get code
+
+Please visit project's [Github repository](https://github.com/ViiSiX/DanceCats).
+
 ### Current Version
 
 Please read our [user manual for v0.1.2](https://dancecats.viisix.space/wiki/TitleIndex).
