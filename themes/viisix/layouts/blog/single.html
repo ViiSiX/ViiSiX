@@ -19,17 +19,7 @@
                             data-width="450"
                             data-show-faces="true">
                     </div>
-                    <script type="text/javascript">
-                        function delayClassAdding(className) {
-                            if (window.jQuery) {
-                                $('code').addClass(className)
-                            } else {
-                                setTimeout(function () { delayClassAdding(className) }, 50)
-                            }
-                        }
-
-                        delayClassAdding('prettyprint');
-                    </script>
+                    {{ partial "google_code_prettyprint" }}
                 </div>
             </section>
             <script data-isso="https://comments.viisix.space"
