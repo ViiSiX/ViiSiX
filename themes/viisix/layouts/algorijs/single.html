@@ -22,16 +22,7 @@
                             data-width="450"
                             data-show-faces="true">
                     </div>
-                    <script type="text/javascript">
-                        function delayClassAdding(className) {
-                            if (window.jQuery) {
-                                $('code').addClass(className)
-                            } else {
-                                setTimeout(function () { delayClassAdding(className) }, 50)
-                            }
-                        }
-
-                        delayClassAdding('prettyprint');
+                    {{ partial "google_code_prettyprint" }}
                     </script>
                     {{ range .Params.js_libs }}
                         <script async src="{{ $.Site.BaseURL }}algorijs/js/{{ . }}?v={{ $.Site.Params.Version }}"></script>

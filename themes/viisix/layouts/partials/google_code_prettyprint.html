@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    function delayClassAdding(className) {
+        if (window.jQuery) {
+            $('code').addClass(className)
+        } else {
+            setTimeout(function () { delayClassAdding(className) }, 50)
+        }
+    }
+
+    delayClassAdding('prettyprint');
+</script>

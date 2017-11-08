@@ -42,8 +42,8 @@ $ make member MEMBER=handsome-sysadmin
 b. Without Docker
 ```
 $ hugo new blog/nice-blog.md
-$ hugo new project/awesome-project
-$ hugo new member/handsome-sysadmin
+$ hugo new projects/awesome-project
+$ hugo new members/handsome-sysadmin
 ```
 
 Then you can edit `/content/blog/nice-blog.md`, input your content.
