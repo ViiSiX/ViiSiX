@@ -11,7 +11,7 @@ enableRobotsTXT = "true"
   contact_iframe = 'https://docs.google.com/forms/d/e/1FAIpQLSfhqdXEH-YtUM9ipkdEKwRfqmdX2834qqfD4yk3SUXSWJFIhQ/viewform?embedded=true'
   contact_iframe_width = 800
   contact_iframe_height = 1000
-  version = "r9_02"
+  version = "r5_00"
 
 [[menu.main]]
   name = "Home"
