@@ -2,7 +2,7 @@
 avatar = "flask-redislite.png"
 project_url = "https://github.com/ViiSiX/FlaskRedislite"
 summary = "A Flask extension that allows you to use Flask with Redislite. It can also help you using redis-collections and rq."
-keywords = ["viisix"]
+keywords = ["viisix", "flask", "redis", "redislite"]
 date = "2017-11-08T09:40:23+07:00"
 title = "Flask Redislite"
 +++
