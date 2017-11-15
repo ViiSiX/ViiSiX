@@ -1,11 +1,20 @@
 <script type="text/javascript">
-    function delayClassAdding(className) {
-        if (window.jQuery) {
-            $('code').addClass(className)
-        } else {
-            setTimeout(function () { delayClassAdding(className) }, 50)
-        }
+  function delayClassAdding(className) {
+    if (window.jQuery) {
+      $('code').addClass(className)
+    } else {
+      setTimeout(function () { delayClassAdding(className) }, 50)
     }
+  }
 
-    delayClassAdding('prettyprint');
+  function delayPrettify() {
+    if (window.PR) {
+      setTimeout(PR.prettyPrint, 50)
+    } else {
+      setTimeout(function () { delayPrettify() }, 50)
+    }
+  }
+
+  delayPrettify()
+  delayClassAdding('prettyprint');
 </script>
