@@ -9,7 +9,7 @@ title = "Image Butler"
 +++
 
 ### What is Image Butler
-It's a simple image server writen based Flask framework.
+It's a simple image server written based on Flask framework.
 
 ### Installation
 Using pip
