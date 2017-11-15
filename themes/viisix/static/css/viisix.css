@@ -233,10 +233,17 @@ p {
     color: #666666;
 }
 
-.blog-post p.blog-post-author,
-.blog-post-container p.blog-post-author,
+.blog-post .blog-post-author,
+.blog-post-container .blog-post-author,
 .isso-thread .textarea.placeholder {
     font-weight: 500;
+    font-size: small;
+    color: #a6a6a6;
+}
+
+.blog-post .blog-post-date,
+.blog-post-container .blog-post-date {
+    font-weight: 400;
     font-size: small;
     color: #a6a6a6;
 }
