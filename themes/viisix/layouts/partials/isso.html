@@ -1,0 +1,12 @@
+<!-- Isso -->
+<h3 class="mx3 mt3">Comments</h3>
+<hr class="mx3 mt0 mb1"/>
+{{ if .Site.Params.isso_url }}
+<script data-isso="{{.Site.Params.isso_url}}"
+        data-isso-css="false"
+        data-isso-require-email="true"
+        src="{{.Site.Params.isso_url}}/js/embed.min.js"
+></script>
+<section id="isso-thread" class="isso-thread mx3 pr1"></section>
+{{ end }}
+<!-- End Isso code -->

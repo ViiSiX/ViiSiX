@@ -1,56 +1,31 @@
 {{ partial "head.html" . }}
 <body>
-    {{ partial "facebook_sdk.html" . }}
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
-    <div class="v-min-h100 flex flex-column">
-        <div id="container" class="h-max-80 px2 flex-auto mx-auto">
-            {{ partial "header.html" . }}
+  {{ partial "facebook_sdk.html" . }}
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <div class="v-min-h100 flex flex-column">
+    <div id="container" class="h-max-80 px2 flex-auto mx-auto">
+      {{ partial "header.html" . }}
 
-            <section id="main" class="mx3" style="padding-bottom: 0 !important;">
-                <div class="algori-container px1">
-                    <h1 class="mt1 mb0">{{ .Title }}</h1>
-                    <p class="algori-summary mt0">{{ .Params.Summary }}</p>
-                    <div id="algori-demo"></div>
-                    <div class="algori-content">
-                        {{ .Content }}
-                    </div>
-                    <div
-                            class="fb-like"
-                            data-share="true"
-                            data-width="450"
-                            data-show-faces="true">
-                    </div>
-                    {{ partial "google_code_prettyprint" }}
-                    </script>
-                    {{ range .Params.js_libs }}
-                        <script async src="{{ $.Site.BaseURL }}algorijs/js/{{ . }}?v={{ $.Site.Params.Version }}"></script>
-                    {{ end }}
-                </div>
-            </section>
-            <!--
-            <script data-isso="https://comments.viisix.space"
-                    data-isso-css="false"
-                    data-isso-require-email="true"
-                    src="https://comments.viisix.space/js/embed.min.js"
-            ></script>
-            <section id="isso-thread" class="isso-thread mx3 pr1"></section>
-            <script type="text/javascript">
-                function delayPrettify() {
-                    if (window.PR) {
-                        setTimeout(PR.prettyPrint, 50)
-                    } else {
-                        setTimeout(function () { delayPrettify() }, 50)
-                    }
-                }
-
-                delayPrettify()
-            </script>
-            -->
+      <section id="main" class="mx3" style="padding-bottom: 0 !important;">
+        <div class="algori-container px1">
+          <h1 class="mt1 mb0">{{ .Title }}</h1>
+          <p class="algori-summary mt0">{{ .Params.Summary }}</p>
+          <div id="algori-demo"></div>
+          <div class="algori-content">
+            {{ .Content }}
+          </div>
+          </script>
+          {{ range .Params.js_libs }}
+            <script async src="{{ $.Site.BaseURL }}algorijs/js/{{ . }}?v={{ $.Site.Params.Version }}"></script>
+          {{ end }}
         </div>
-
-        {{ partial "footer.html" . }}
+      </section>
+      {{ partial "isso.html" . }}
     </div>
+
+    {{ partial "footer.html" . }}
+  </div>
 </body>
 </html>

@@ -22,7 +22,6 @@
       <meta content="{{ .Site.BaseURL }}{{ .Params.Feature_Image }}" property="og:image:secure_url"/>
     {{ end }}
   {{ end }}
-  <meta content="{{ .Site.Params.facebook_app_id }}" property="fb:app_id"/>
   <meta content="{{ .Permalink }}" property="og:url"/>
   <!-- End of SEO -->
 
@@ -58,4 +57,5 @@
 
   {{ partial "google_analytics" . }}
   {{ partial "google_adsense" . }}
+  {{ partial "piwik" . }}
 </head>
