@@ -5,8 +5,10 @@ theme = "viisix"
 enableRobotsTXT = "true"
 
 [params]
-  facebook_app_id = "1468082743254961"
-  google_analytics = "UA-76194783-4"
+#  facebook_app_id = "1468082743254961"
+#  google_analytics = "UA-76194783-4"
+  piwik_id = 1
+  isso_url = "https://comments.viisix.space"
   google_adsense = "ca-pub-3183154881163104"
   contact_iframe = 'https://docs.google.com/forms/d/e/1FAIpQLSfhqdXEH-YtUM9ipkdEKwRfqmdX2834qqfD4yk3SUXSWJFIhQ/viewform?embedded=true'
   contact_iframe_width = 800

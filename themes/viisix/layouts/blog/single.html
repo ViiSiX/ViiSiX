@@ -16,32 +16,10 @@
           <div class="blog-post-content">
             {{ .Content }}
           </div>
-          <div
-              class="fb-like"
-              data-share="true"
-              data-width="450"
-              data-show-faces="true">
-          </div>
           {{ partial "google_code_prettyprint" }}
         </div>
       </section>
-      <script data-isso="https://comments.viisix.space"
-              data-isso-css="false"
-              data-isso-require-email="true"
-              src="https://comments.viisix.space/js/embed.min.js"
-      ></script>
-      <section id="isso-thread" class="isso-thread mx3 pr1"></section>
-      <script type="text/javascript">
-        function delayPrettify() {
-          if (window.PR) {
-            setTimeout(PR.prettyPrint, 50)
-          } else {
-            setTimeout(function () { delayPrettify() }, 50)
-          }
-        }
-
-        delayPrettify()
-      </script>
+      {{ partial "isso.html" . }}
     </div>
 
     {{ partial "footer.html" . }}
