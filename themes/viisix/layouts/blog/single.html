@@ -1,47 +1,50 @@
 {{ partial "head.html" . }}
 <body>
-    {{ partial "facebook_sdk.html" . }}
-    <div class="v-min-h100 flex flex-column">
-        <div id="container" class="h-max-80 px2 flex-auto mx-auto">
-            {{ partial "header.html" . }}
+  {{ partial "facebook_sdk.html" . }}
+  <div class="v-min-h100 flex flex-column">
+    <div id="container" class="h-max-80 px2 flex-auto mx-auto">
+      {{ partial "header.html" . }}
 
-            <section id="main" class="mx3" style="padding-bottom: 0 !important;">
-                <div class="blog-post-container px1">
-                    <h1 class="mt1 mb0">{{ .Title }}</h1>
-                    <p class="blog-post-author mt0 mb1">By: {{.Params.Author}}</p>
-                    <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
-                    <div class="blog-post-content">
-                        {{ .Content }}
-                    </div>
-                    <div
-                            class="fb-like"
-                            data-share="true"
-                            data-width="450"
-                            data-show-faces="true">
-                    </div>
-                    {{ partial "google_code_prettyprint" }}
-                </div>
-            </section>
-            <script data-isso="https://comments.viisix.space"
-                    data-isso-css="false"
-                    data-isso-require-email="true"
-                    src="https://comments.viisix.space/js/embed.min.js"
-            ></script>
-            <section id="isso-thread" class="isso-thread mx3 pr1"></section>
-            <script type="text/javascript">
-                function delayPrettify() {
-                    if (window.PR) {
-                        setTimeout(PR.prettyPrint, 50)
-                    } else {
-                        setTimeout(function () { delayPrettify() }, 50)
-                    }
-                }
-
-                delayPrettify()
-            </script>
+      <section id="main" class="mx3" style="padding-bottom: 0 !important;">
+        <div class="blog-post-container px1">
+          <h1 class="mt1 mb0">{{ .Title }}</h1>
+          <p class="mt0 mb1">
+            <span class="blog-post-author">By: {{.Params.Author}} </span>
+            <span class="blog-post-date"> - {{dateFormat "Jan 02, 2006" .Params.date}}</span>
+          </p>
+          <p class="blog-post-summary mt0">{{ .Params.Summary }}</p>
+          <div class="blog-post-content">
+            {{ .Content }}
+          </div>
+          <div
+              class="fb-like"
+              data-share="true"
+              data-width="450"
+              data-show-faces="true">
+          </div>
+          {{ partial "google_code_prettyprint" }}
         </div>
+      </section>
+      <script data-isso="https://comments.viisix.space"
+              data-isso-css="false"
+              data-isso-require-email="true"
+              src="https://comments.viisix.space/js/embed.min.js"
+      ></script>
+      <section id="isso-thread" class="isso-thread mx3 pr1"></section>
+      <script type="text/javascript">
+        function delayPrettify() {
+          if (window.PR) {
+            setTimeout(PR.prettyPrint, 50)
+          } else {
+            setTimeout(function () { delayPrettify() }, 50)
+          }
+        }
 
-        {{ partial "footer.html" . }}
+        delayPrettify()
+      </script>
     </div>
+
+    {{ partial "footer.html" . }}
+  </div>
 </body>
 </html>
