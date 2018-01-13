@@ -1,5 +1,5 @@
 +++
-author = "Trong-Nghia Nguyen"
+author = "Nghia Tr. Nguyen"
 summary = "Fail2ban is an opensource IDS written in Python. It protects your server from brute force attacks by scanning log files and updating iptables' rules."
 keywords = ["viisix", "viisix nghia fail2ban", "security", "ids", "fail2ban krb5kdc", "fail2ban kerberos"]
 feature_image = "logo/fail2ban.png"

@@ -2,7 +2,7 @@
 date = "2017-04-21T17:07:45+07:00"
 title = "Alert blocking sessions on SQL Server"
 summary = "Sometime your whole application hang just because of deadlock or big query. For our case - yes, then I write this script and setup a job that run every 5 minutes to notice us for further checks."
-author = "Trong-Nghia Nguyen"
+author = "Nghia Tr. Nguyen"
 keywords = ["viisix", "viisix nghia sqlserver", "sqlserver blocking session", "sql server"]
 feature_image = "blog-images/alert-blocking-sessions-on-sql-server/01.png"
 feature_image_v_adjust = 10

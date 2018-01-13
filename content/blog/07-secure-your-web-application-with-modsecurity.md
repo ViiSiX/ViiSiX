@@ -5,7 +5,7 @@ feature_image_v_adjust = 60
 feature_image = "logo/modsecurity.png"
 keywords = ["viisix", "viisix nghia mod security", "mod security firewall", "waf", "firewall", "owasp"]
 summary = "ModSecurity is an open source Web Application Firewall run as a module of your web server like Apache2 or Nginx. It provides you the ability to inspect web trafic according predefined rules, also with the options to monitor and control the trafic. The best thing is its lightness and plugable ability give you a good beginning to secure your system."
-author = "Trong-Nghia Nguyen"
+author = "Nghia Tr. Nguyen"
 
 +++
 [ModSecurity](http://modsecurity.org/) is an open source Web Application Firewall run as a module of your web server like Apache2 or Nginx. It provides you the ability to inspect web trafic according predefined rules, also with the options to monitor and control the trafic. The best thing is its lightness and plugable ability give you a good beginning to secure your system.
