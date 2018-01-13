@@ -1,5 +1,5 @@
 +++
-author = "Trong-Nghia Nguyen"
+author = "Nghia Tr. Nguyen"
 date = "2017-06-15T21:34:01+07:00"
 keywords = ["viisix", "viisix nghia database index", "database index types", "index types"]
 summary = "Working with databases or not, people working in IT field do know about database indexes. What is Database Index? Let's discover."

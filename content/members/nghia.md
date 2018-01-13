@@ -1,6 +1,6 @@
 +++
 avatar = "nghiant2.jpg"
-full_name = "Trong-Nghia Nguyen"
+full_name = "Nghia Tr. Nguyen"
 date = "2017-04-10T17:18:07+07:00"
 title = "nghia"
 
