@@ -3,7 +3,7 @@ author = "Tu A. Nguyen"
 date = "2017-06-26T16:28:33+07:00"
 summary = "In this guide, I will show you how to create a Docker Swarm cluster using docker-machine and Oracle VirtualBox."
 title = "Get your hand dirty with Docker Swarm - Part I"
-keywords = ["viisix", "docker", "swarm", "docker swarm"]
+keywords = ["viisix", "viisix tu", "docker", "swarm", "docker swarm"]
 feature_image = "logo/docker-swarm.png"
 feature_image_v_adjust = 22.5
 

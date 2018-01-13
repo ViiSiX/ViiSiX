@@ -4,7 +4,7 @@ feature_image_v_adjust = 12.5
 feature_image = "/logo/python.png"
 keywords = ["viisix", "viisix nghia", "viisix python test", "python datetime monkeypatch"]
 summary = "How to do Unit Testing with Python functions related to current date time? This article will help you."
-author = "Trong-Nghia Nguyen"
+author = "Nghia Tr. Nguyen"
 date = "2017-05-16T15:00:25+07:00"
 
 +++

@@ -1,5 +1,5 @@
 +++
-author = "Trong-Nghia Nguyen"
+author = "Nghia Tr. Nguyen"
 date = "2017-06-08T21:51:05+07:00"
 feature_image = "/blog-images/add-fusejs-search-engine-to-viisix.space/01.png"
 feature_image_v_adjust = 7.5

@@ -1,5 +1,5 @@
 +++
-author = "Trong-Nghia Nguyen"
+author = "Nghia Tr. Nguyen"
 date = "2017-06-10T15:59:56+07:00"
 feature_image = "/logo/mysql.png"
 feature_image_v_adjust = 12

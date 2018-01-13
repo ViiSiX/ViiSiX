@@ -1,7 +1,7 @@
 +++
 keywords = ["viisix", "viisix nghia", "viisix hugo isso", "hugo", "isso", "gohugo", "go hugo"]
 summary = "Building a information website using Wordpress, Druppal or Django is a little bit overkill; as we do not want to waste our methods and works into developing and maintenance such complex systems. In this article we will tell you how this website is built without the back-end site."
-author = "Trong-Nghia Nguyen"
+author = "Nghia Tr. Nguyen"
 date = "2017-04-26T11:48:02+07:00"
 title = "How did we build viisix.space?"
 feature_image_v_adjust = 29

@@ -1,7 +1,7 @@
 +++
 date = "2017-04-19T21:06:09+07:00"
 title = "Implement Continuous Integration the right way"
-author = "Trong-Nghia Nguyen"
+author = "Nghia Tr. Nguyen"
 summary = "In recent years, Agile methodology has been raising popularly together with CI (Continuous Integration) and CD (Continuous Delivery/Deployment) with the expectation of fast and stabled software products delivery. But what exactly are CI-CD and how to apply them? Let's have a walk."
 keywords = ["viisix", "viisix nghia continuous integration", "continuous integration"]
 feature_image = "blog-images/implement-ci-the-right-way/01.png"

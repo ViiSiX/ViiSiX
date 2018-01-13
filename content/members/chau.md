@@ -1,7 +1,7 @@
 +++
 avatar = "chautc.jpg"
 date = "2017-06-13T23:27:37+07:00"
-full_name = "Cam-Chau Tran"
+full_name = "Chau C. Tran"
 title = "chau"
 draft = true
 
