@@ -59,6 +59,8 @@ you can learn more about algorithm just by practicing, have fun programming!
 
 - [Project Euler](https://projecteuler.net): The project's main aim is to help 
   learners solve problems with the combination of math, computer and programming.
+- [Exercism](http://exercism.io): The name tell it all, you level up whenever
+  you practice with those exercises.
 - [HackerRank](https://www.hackerrank.com): Complete the tutorial, solve 
   problems, receive points, get the chances for jobs. Try this site.
 
